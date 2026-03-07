@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 을지로3가역 2호선 FAQ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- 서울교통공사 로고 이미지 추가 (jpg 형식) -->
+            <img src="images/seoul_subway_logo.jpg" alt="Seoul Subway Logo" class="logo">
+        </div>
+    </header>
+
+    <div class="language-selector" id="language-selector">
+        <h2>Select Your Language</h2>
+        <button class="language-btn" onclick="selectLanguage('ko')">한국어</button>
+        <button class="language-btn" onclick="selectLanguage('en')">English</button>
+        <button class="language-btn" onclick="selectLanguage('zh')">Chinese(中文)</button>
+        <button class="language-btn" onclick="selectLanguage('ja')">Japanese(日本語)</button>
+        <button class="language-btn" onclick="selectLanguage('es')">Spanish</button>
+    </div>
+
+    <div class="faq-container" id="faq-container" style="display: none;">
+        <!-- FAQ 내용은 JavaScript로 동적으로 삽입됨 -->
+    </div>
+
+    <div class="back-button-container" id="back-button-container" style="display: none;">
+        <button class="back-btn" onclick="goBack()">Go Back</button>
+    </div>
+
+    <footer>
+        <p>© 2026 서울교통공사 | 고객 서비스</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
