@@ -1,4 +1,4 @@
-// --- 다국어 FAQ 데이터 (강조 스타일 유지, 번역 완벽 수정) ---
+// --- 다국어 FAQ 데이터 (최종 검수 완료 버전) ---
 const faqContent = {
   ko: [
     {
@@ -151,7 +151,7 @@ Go through the wheelchair/speed gate and visit the station office (Information) 
     },
     {
       question: "3. 如何换乘3号线",
-      answer: `<strong>请不要刷卡。</strong> 请下楼并跟随橙色（3号线）标识走。2号线和3号线站台是相连的。<br><br>
+      answer: `<strong>请不要刷卡。</strong>请下楼并跟随橙色（3号线）标识走。2号线和3号线站台是相连的。<br><br>
 如果您只是想乘坐3号线（而非换乘），请在闸机处刷卡，然后下楼跟随橙色（3号线）标识走。`
     },
     {
@@ -188,7 +188,7 @@ Go through the wheelchair/speed gate and visit the station office (Information) 
         "E-03": "下車処理がされていません。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-04": "乗車処理がされていません。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-05": "時間超過です。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-07": "カードの期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-07": "カードの期限切れです。<br>非常ゲート（車椅子/スピードゲート）를 을 통과하여 11・12番出口付近の駅務室（Information）にお越しください。",
         "E-14": "残高不足（お金が足りません）。<br>左右にある精算機でチャージし、再度カードをタッチして出てください。",
         "E-27": "定期券の期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-33": "既に乗車処理済みです（既にタッチされています）。<br>非常ゲートを通ってください（音が鳴っても無視してください）。",
@@ -204,16 +204,15 @@ Go through the wheelchair/speed gate and visit the station office (Information) 
     },
     {
       question: "3. 3号線への乗り換え方法",
-      answer: `<strong>カードをタッチしないでください。</strong> 階段を降りて、オレンジ色の3号線の案内に従って進んでください。2号線と3号線のホームは改札内でつながっています。<br><br>
-乗り換えではなく、3号線のみを利用する場合は、改札口でカードをタッチして入場し、階段を降りてオレンジ色の3号線の案内に従って進んでください。
-`
+      answer: `<strong>カードをタッチしないでください。</strong>階段を降りて、オレンジ色の3号線の標識に従ってください。2号線と3号線のホームはつながっています。<br><br>
+乗り換えではなく、3号線から利用を開始する場合は、ゲートでカードをタッチして入場し、階段を降りてオレンジ色の3号線の標識に従ってください。`
     },
     {
       question: "4. その他のお問い合わせ",
       answer: `
 ヘルプコールボタンを押してください。<br><br>
 または<br><br>
-車椅子/スピードゲートを通り、11・12番出口付近の駅務室（Information）にお越しください。
+車椅子/スピードゲートを通り、11・12番出口付近の駅務室（Information）にお越しください.
       `
     }
   ],
@@ -272,14 +271,14 @@ Pase por la puerta de silla de ruedas/puerta rápida y visite la oficina de la e
   ]
 };
 
-// --- 제어 함수 ---
+// --- 언어 선택 및 로직 (기존 스크롤 기능 유지) ---
 function selectLanguage(language) {
   const languageSelector = document.getElementById("language-selector");
   const faqContainer = document.getElementById("faq-container");
   const backButtonContainer = document.getElementById("back-button-container");
 
   const selectedFAQ = faqContent[language];
-  if (!selectedFAQ) return;
+  if (!selectedFAQ) { alert("선택한 언어의 FAQ가 준비되지 않았습니다."); return; }
 
   languageSelector.style.display = "none";
   faqContainer.style.display = "block";
@@ -301,21 +300,24 @@ function selectLanguage(language) {
     answerDiv.innerHTML = faq.answer;
 
     questionBtn.addEventListener("click", () => {
-      const isVisible = answerDiv.style.display === "block";
-      answerDiv.style.display = isVisible ? "none" : "block";
+      answerDiv.style.display = answerDiv.style.display === "block" ? "none" : "block";
 
-      if (!isVisible) {
-        const errorButtons = answerDiv.querySelectorAll(".error-btn");
-        const errorDetailDiv = answerDiv.querySelector("#error-detail");
-        errorButtons.forEach(btn => {
-          btn.onclick = () => {
-            const code = btn.getAttribute("data-code");
-            if (faq.errors && errorDetailDiv) {
-              errorDetailDiv.innerHTML = faq.errors[code] || "";
-            }
-          };
-        });
-      }
+      const errorButtons = answerDiv.querySelectorAll(".error-btn");
+      const errorDetailDiv = answerDiv.querySelector("#error-detail");
+      errorButtons.forEach(btn => {
+        btn.style.display = "block";
+        btn.style.width = "100%";
+        btn.style.padding = "10px";
+        btn.style.margin = "5px 0";
+        btn.onclick = () => {
+          const code = btn.getAttribute("data-code");
+          if (faq.errors && errorDetailDiv) {
+            errorDetailDiv.innerHTML = faq.errors[code] || "";
+            // 스크롤 기능: 에러 상세 메시지가 화면 최상단에 오도록 함
+            errorDetailDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        };
+      });
     });
 
     faqItem.appendChild(questionBtn);
@@ -324,6 +326,7 @@ function selectLanguage(language) {
   });
 }
 
+// --- 뒤로가기 ---
 function goBack() {
   document.getElementById("language-selector").style.display = "block";
   document.getElementById("faq-container").style.display = "none";
