@@ -1,4 +1,4 @@
-// --- 다국어 FAQ 데이터 ---
+// --- 다국어 FAQ 데이터 (강조 스타일 유지, 번역 완벽 수정) ---
 const faqContent = {
   ko: [
     {
@@ -57,12 +57,12 @@ const faqContent = {
     }
   ],
 
-en: [
+  en: [
     {
       question: "1. Card Errors",
       answer: `
 1) There are two separate gates for entry and exit. Please use the correct gate (green arrow).<br>
-2) <strong>Tap your card again(No extra fare).</strong> Check the message when tapping your card and <strong><u>select the corresponding error code.</u></strong><br>
+2) <strong>Tap your card again (No extra fare).</strong> Check the message when tapping your card and <strong><u>select the corresponding error code.</u></strong><br>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03</button>
@@ -78,27 +78,27 @@ en: [
 <div class="error-detail" id="error-detail"></div>
       `,
       errors: {
-        "E-03": "The ticket has not been processed for exit.<br>Go through the emergency gate (wheelchair/speed gate) and visit the station office(Information) near Exit 11 & 12.",
-        "E-04": "The ticket has not been processed for entry.<br>Go through the emergency gate (wheelchair/speed gate) and visit the station office(Information) near Exit 11 & 12.",
-        "E-05": "Time exceeded.<br>Go through the emergency gate (wheelchair/speed gate) and visit the station office(Information) near Exit 11 & 12.",
-        "E-07": "Card expired.<br>Go through the emergency gate (wheelchair/speed gate) and visit the station office(Information) near Exit 11 & 12.",
-        "E-14": "Insufficient balance(Not enough money).<br>Use the machine(on your left or right) to recharge(reload) and tap your card again to exit.",
-        "E-27": "Commuter pass expired.<br>Go through the emergency gate (wheelchair gate/speed gate) and visit the station office(Information) near Exit 11 & 12.",
-        "E-33": "Already processed for entry(Card has already been tagged).<br>Pass through the emergency gate (Ignore the beep sound).",
-        "E-44": "Already processed for exit(Card has already been tagged).<br>Pass through the emergency gate (Ignore the beep sound)."
+        "E-03": "The ticket has not been processed for exit.<br>Go through the emergency gate (wheelchair/speed gate) and visit the station office (Information) near Exit 11 & 12.",
+        "E-04": "The ticket has not been processed for entry.<br>Go through the emergency gate (wheelchair/speed gate) and visit the station office (Information) near Exit 11 & 12.",
+        "E-05": "Time exceeded.<br>Go through the emergency gate (wheelchair/speed gate) and visit the station office (Information) near Exit 11 & 12.",
+        "E-07": "Card expired.<br>Go through the emergency gate (wheelchair/speed gate) and visit the station office (Information) near Exit 11 & 12.",
+        "E-14": "Insufficient balance (Not enough money).<br>Use the machine (on your left or right) to recharge and tap your card again to exit.",
+        "E-27": "Commuter pass expired.<br>Go through the emergency gate (wheelchair gate/speed gate) and visit the station office (Information) near Exit 11 & 12.",
+        "E-33": "Already processed for entry (Card has already been tagged).<br>Pass through the emergency gate (Ignore the beep sound).",
+        "E-44": "Already processed for exit (Card has already been tagged).<br>Pass through the emergency gate (Ignore the beep sound)."
       }
     },
     {
-      question: "2. I went the wrong way(I missed my stop)",
+      question: "2. I went the wrong way (I missed my stop)",
       answer: `You can go to the opposite side to take the subway back. <br>
 <strong>1) Single-journey ticket:</strong> Do not tap your card. Press the help call button and tell us that you want to go to opposite side.<br><br>
-<strong>2) T-money(Transportation Card) or Climate Card:</strong> Tap to exit, then tap again at the opposite gate to enter.<br>(No extra fare, only one transfer counted.)
+<strong>2) T-money (Transportation Card) or Climate Card:</strong> Tap to exit, then tap again at the opposite gate to enter.<br>(No extra fare, only one transfer counted.)
       `
     },
     {
       question: "3. How to transfer to Line 3",
-      answer: `<strong>Do not tap your card.</strong> Go down the stairs and follow the orange Line 3 signs. Line 2 and Line 3 platforms are connected <br><br>
-If you just want to start your journey on Line 3(not transferring), tap your card at the gate, go downstairs, and follow the orange Line 3 signs.
+      answer: `<strong>Do not tap your card.</strong> Go down the stairs and follow the orange Line 3 signs. Line 2 and Line 3 platforms are connected.<br><br>
+If you just want to start your journey on Line 3 (not transferring), tap your card at the gate, go downstairs, and follow the orange Line 3 signs.
 `
     },
     {
@@ -106,7 +106,7 @@ If you just want to start your journey on Line 3(not transferring), tap your car
       answer: `
 Press the help call button.<br><br>
 Or<br><br>
-Go through the wheelchair/speed gate and visit the station office(Information) near Exit 11 & 12.
+Go through the wheelchair/speed gate and visit the station office (Information) near Exit 11 & 12.
       `
     }
   ],
@@ -115,8 +115,8 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
     {
       question: "1. 卡片错误",
       answer: `
-1) 进站和出站闸机是分开的。请 사용正确的闸机（绿色箭头）。<br>
-2) <strong>请再次刷卡（无额外費用）。</strong> 刷卡时请确认显示的提示信息，并 <strong><u>选择相应的错误代码。</u></strong><br>
+1) 进站和出站闸机是分开的。请使用正确的闸机（绿色箭头）。<br>
+2) <strong>请再次刷卡（无额外费用）。</strong> 刷卡时请确认显示的提示信息，并 <strong><u>选择相应的错误代码。</u></strong><br>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03</button>
@@ -151,7 +151,7 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
     },
     {
       question: "3. 如何换乘3号线",
-      answer: `<strong>请不要刷卡。</strong>请下楼并跟随橙色（3号线）标识走。2号线和3号线站台是相连的。<br><br>
+      answer: `<strong>请不要刷卡。</strong> 请下楼并跟随橙色（3号线）标识走。2号线和3号线站台是相连的。<br><br>
 如果您只是想乘坐3号线（而非换乘），请在闸机处刷卡，然后下楼跟随橙色（3号线）标识走。`
     },
     {
@@ -168,8 +168,8 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
     {
       question: "1. カードのエラー",
       answer: `
-1) 入場用と退場用のゲートは分かれています。正しいゲート（緑의 矢印）を使用してください。<br>
-2) <strong>もう一度タッチしてください（追加料金なし）。</strong> カードをタッチした際のメッセージを確認し, <strong><u>対応するエラーコードを選択してください。</u></strong><br>
+1) 入場用と退場用のゲートは分かれています。正しいゲート（緑の矢印）を使用してください。<br>
+2) <strong>もう一度タッチしてください（追加料金なし）。</strong> カードをタッチした際のメッセージを確認し、<strong><u>対応するエラーコードを選択してください。</u></strong><br>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03</button>
@@ -187,10 +187,10 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
       errors: {
         "E-03": "下車処理がされていません。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-04": "乗車処理がされていません。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-05": "時間超過です。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近의 駅務室（Information）にお越しください。",
-        "E-07": "カードの期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近의 駅務室（Information）にお越しください。",
+        "E-05": "時間超過です。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-07": "カードの期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-14": "残高不足（お金が足りません）。<br>左右にある精算機でチャージし、再度カードをタッチして出てください。",
-        "E-27": "定期券の期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近의 駅務室（Information）にお越しください。",
+        "E-27": "定期券の期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-33": "既に乗車処理済みです（既にタッチされています）。<br>非常ゲートを通ってください（音が鳴っても無視してください）。",
         "E-44": "既に下車処理済みです（既にタッチされています）。<br>非常ゲートを通ってください（音が鳴っても無視してください）。"
       }
@@ -204,8 +204,9 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
     },
     {
       question: "3. 3号線への乗り換え方法",
-      answer: `<strong>카드을 タッチしないでください。</strong>階段を降りて、オレンジ色の3号線の標識に従ってください。2号線と3号線のホームはつながっています。<br><br>
-乗り換えではなく、3号線から利用を開始する場合は、ゲートでカードをタッチして入場し、階段を降りてオレンジ色の3号線の標識に従ってください。`
+      answer: `<strong>カードをタッチしないでください。</strong> 階段を降りて、オレンジ色の3号線の案内に従って進んでください。2号線と3号線のホームは改札内でつながっています。<br><br>
+乗り換えではなく、3号線のみを利用する場合は、改札口でカードをタッチして入場し、階段を降りてオレンジ色の3号線の案内に従って進んでください。
+`
     },
     {
       question: "4. その他のお問い合わせ",
@@ -252,7 +253,7 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
       question: "2. Me equivoqué de dirección (Me pasé mi parada)",
       answer: `Puede ir al lado opuesto para tomar el metro de regreso.<br>
 <strong>1) Billete de un solo viaje:</strong> No toque la tarjeta. Presione el botón de ayuda y diga que quiere ir al lado opuesto.<br><br>
-<strong>2) Tarjeta T-money o Climate Card:</strong> Tap to exit, then tap de nuevo desde la puerta opuesta para entrar.<br>(Sin cargo adicional, solo se cuenta un transbordo).
+<strong>2) Tarjeta T-money o Climate Card:</strong> Pase la tarjeta para salir, luego pase de nuevo desde la puerta opuesta para entrar.<br>(Sin cargo adicional, solo se cuenta un transbordo).
       `
     },
     {
@@ -271,14 +272,14 @@ Pase por la puerta de silla de ruedas/puerta rápida y visite la oficina de la e
   ]
 };
 
-// --- 언어 선택 ---
+// --- 제어 함수 ---
 function selectLanguage(language) {
   const languageSelector = document.getElementById("language-selector");
   const faqContainer = document.getElementById("faq-container");
   const backButtonContainer = document.getElementById("back-button-container");
 
   const selectedFAQ = faqContent[language];
-  if (!selectedFAQ) { alert("선택한 언어의 FAQ가 준비되지 않았습니다."); return; }
+  if (!selectedFAQ) return;
 
   languageSelector.style.display = "none";
   faqContainer.style.display = "block";
@@ -300,23 +301,21 @@ function selectLanguage(language) {
     answerDiv.innerHTML = faq.answer;
 
     questionBtn.addEventListener("click", () => {
-      answerDiv.style.display = answerDiv.style.display === "block" ? "none" : "block";
+      const isVisible = answerDiv.style.display === "block";
+      answerDiv.style.display = isVisible ? "none" : "block";
 
-      const errorButtons = answerDiv.querySelectorAll(".error-btn");
-      const errorDetailDiv = answerDiv.querySelector("#error-detail");
-      errorButtons.forEach(btn => {
-        btn.style.display = "block";
-        btn.style.width = "100%";
-        btn.style.padding = "10px";
-        btn.style.margin = "5px 0";
-        btn.onclick = () => {
-          const code = btn.getAttribute("data-code");
-          if (faq.errors && errorDetailDiv) {
-            errorDetailDiv.innerHTML = faq.errors[code] || "";
-            errorDetailDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        };
-      });
+      if (!isVisible) {
+        const errorButtons = answerDiv.querySelectorAll(".error-btn");
+        const errorDetailDiv = answerDiv.querySelector("#error-detail");
+        errorButtons.forEach(btn => {
+          btn.onclick = () => {
+            const code = btn.getAttribute("data-code");
+            if (faq.errors && errorDetailDiv) {
+              errorDetailDiv.innerHTML = faq.errors[code] || "";
+            }
+          };
+        });
+      }
     });
 
     faqItem.appendChild(questionBtn);
@@ -325,7 +324,6 @@ function selectLanguage(language) {
   });
 }
 
-// --- 뒤로가기 ---
 function goBack() {
   document.getElementById("language-selector").style.display = "block";
   document.getElementById("faq-container").style.display = "none";
