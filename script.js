@@ -57,13 +57,12 @@ const faqContent = {
     }
   ],
 
-  en: [
+en: [
     {
       question: "1. Card Errors",
       answer: `
 1) There are two separate gates for entry and exit. Please use the correct gate (green arrow).<br>
-2) Check the message when tapping your card and select the corresponding error code.<br>
-*No extra fare <br><br>
+2) <strong>Tap your card again(No extra fare).</strong> Check the message when tapping your card and <strong><u>select the corresponding error code.</u></strong><br>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03</button>
@@ -92,13 +91,13 @@ const faqContent = {
     {
       question: "2. I went the wrong way(I missed my stop)",
       answer: `You can go to the opposite side to take the subway back. <br>
-1) Single-journey ticket: Do not tap the card. Press the help call button and tell us that you want to go to opposite side.<br><br>
-2) T-money(Transportation Card) or Climate Card: Tap to exit, then tap again at the opposite gate to enter.<br>(No extra fare, only one transfer counted.)
+<strong>1) Single-journey ticket:</strong> Do not tap your card. Press the help call button and tell us that you want to go to opposite side.<br><br>
+<strong>2) T-money(Transportation Card) or Climate Card:</strong> Tap to exit, then tap again at the opposite gate to enter.<br>(No extra fare, only one transfer counted.)
       `
     },
     {
       question: "3. How to transfer to Line 3",
-      answer: `Do not tap your card. Go down the stairs and follow the orange Line 3 signs. Line 2 and Line 3 platforms are connected <br><br>
+      answer: `<strong>Do not tap your card.</strong> Go down the stairs and follow the orange Line 3 signs. Line 2 and Line 3 platforms are connected <br><br>
 If you just want to start your journey on Line 3(not transferring), tap your card at the gate, go downstairs, and follow the orange Line 3 signs.
 `
     },
@@ -116,9 +115,8 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
     {
       question: "1. 卡片错误",
       answer: `
-1) 进站和出站闸机是分开的。请使用正确的闸机（绿色箭头）。<br>
-2) 刷卡时请确认显示的提示信息，并选择相应的错误代码。<br>
-*不会产生额外费用。<br><br>
+1) 进站和出站闸机是分开的。请 사용正确的闸机（绿色箭头）。<br>
+2) <strong>请再次刷卡（无额外費用）。</strong> 刷卡时请确认显示的提示信息，并 <strong><u>选择相应的错误代码。</u></strong><br>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03</button>
@@ -147,13 +145,13 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
     {
       question: "2. 我坐错方向了（坐过站了）",
       answer: `您可以前往对面再次乘坐地铁。<br>
-1) 单程票：请勿刷卡。请按求助按钮，告知工作人员您想去对面站台。<br><br>
-2) T-money卡或气候同行卡：刷卡出站后，从对面闸机再次刷卡进站。<br>（不产生额外费用，仅计为一次换乘。）
+<strong>1) 单程票：</strong> 请勿刷卡。请按求助按钮，告知工作人员您想去对面站台。<br><br>
+<strong>2) T-money卡或气候同行卡：</strong> 刷卡出站后，从对面闸机再次刷卡进站。<br>（不产生额外费用，仅计为一次换乘。）
       `
     },
     {
       question: "3. 如何换乘3号线",
-      answer: `请不要刷卡。请下楼并跟随橙色（3号线）标识走。2号线和3号线站台是相连的。<br><br>
+      answer: `<strong>请不要刷卡。</strong>请下楼并跟随橙色（3号线）标识走。2号线和3号线站台是相连的。<br><br>
 如果您只是想乘坐3号线（而非换乘），请在闸机处刷卡，然后下楼跟随橙色（3号线）标识走。`
     },
     {
@@ -170,9 +168,8 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
     {
       question: "1. カードのエラー",
       answer: `
-1) 入場用と退場用のゲートは分かれています。正しいゲート（緑の矢印）を使用してください。<br>
-2) カードをタッチした際のメッセージを確認し、対応するエラーコードを選択してください。<br>
-*追加料金は発生しません。<br><br>
+1) 入場用と退場用のゲートは分かれています。正しいゲート（緑의 矢印）を使用してください。<br>
+2) <strong>もう一度タッチしてください（追加料金なし）。</strong> カードをタッチした際のメッセージを確認し, <strong><u>対応するエラーコードを選択してください。</u></strong><br>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03</button>
@@ -190,10 +187,10 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
       errors: {
         "E-03": "下車処理がされていません。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-04": "乗車処理がされていません。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-05": "時間超過です。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-07": "カードの期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-05": "時間超過です。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近의 駅務室（Information）にお越しください。",
+        "E-07": "カードの期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近의 駅務室（Information）にお越しください。",
         "E-14": "残高不足（お金が足りません）。<br>左右にある精算機でチャージし、再度カードをタッチして出てください。",
-        "E-27": "定期券の期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-27": "定期券の期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近의 駅務室（Information）にお越しください。",
         "E-33": "既に乗車処理済みです（既にタッチされています）。<br>非常ゲートを通ってください（音が鳴っても無視してください）。",
         "E-44": "既に下車処理済みです（既にタッチされています）。<br>非常ゲートを通ってください（音が鳴っても無視してください）。"
       }
@@ -201,13 +198,13 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
     {
       question: "2. 反対方向に乗ってしまいました（乗り越しました）",
       answer: `反対側に移動して再度地下鉄に乗ることができます。<br>
-1) 1回券の場合：カードをタッチしないでください。ヘルプコールボタンを押し、反対側に移動したい旨を伝えてください。<br><br>
-2) T-moneyまたは気候同行カード：一度タッチして出場し、反対側のゲートから再度タッチして入場してください。<br>（追加料金なし、乗り換え1回としてカウントされます。）
+<strong>1) 1回券の場合：</strong> カードをタッチしないでください。ヘルプコールボタンを押し、反対側に移動したい旨を伝えてください。<br><br>
+<strong>2) T-moneyまたは気候同行カード：</strong> 一度タッチして出場し、反対側のゲートから再度タッチして入場してください。<br>（追加料金なし、乗り換え1回としてカウントされます。）
       `
     },
     {
       question: "3. 3号線への乗り換え方法",
-      answer: `カードをタッチしないでください。階段を降りて、オレンジ色の3号線の標識に従ってください。2号線と3号線のホームはつながっています。<br><br>
+      answer: `<strong>카드을 タッチしないでください。</strong>階段を降りて、オレンジ色の3号線の標識に従ってください。2号線と3号線のホームはつながっています。<br><br>
 乗り換えではなく、3号線から利用を開始する場合は、ゲートでカードをタッチして入場し、階段を降りてオレンジ色の3号線の標識に従ってください。`
     },
     {
@@ -225,8 +222,7 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
       question: "1. Errores de tarjeta",
       answer: `
 1) Hay dos puertas separadas para la entrada y la salida. Use la puerta correcta (flecha verde).<br>
-2) Verifique el mensaje al tocar su tarjeta y seleccione el código de error correspondiente.<br>
-*Sin cargo adicional.<br><br>
+2) <strong>Pase su tarjeta de nuevo (Sin costo adicional).</strong> Verifique el mensaje al tocar su tarjeta y <strong><u>seleccione el código de error correspondiente.</u></strong><br>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03</button>
@@ -255,13 +251,13 @@ Go through the wheelchair/speed gate and visit the station office(Information) n
     {
       question: "2. Me equivoqué de dirección (Me pasé mi parada)",
       answer: `Puede ir al lado opuesto para tomar el metro de regreso.<br>
-1) Billete de un solo viaje: No toque la tarjeta. Presione el botón de ayuda y diga que quiere ir al lado opuesto.<br><br>
-2) Tarjeta T-money o Climate Card: Toque para salir y luego toque de nuevo desde la puerta opuesta para entrar.<br>(Sin cargo adicional, solo se cuenta un transbordo).
+<strong>1) Billete de un solo viaje:</strong> No toque la tarjeta. Presione el botón de ayuda y diga que quiere ir al lado opuesto.<br><br>
+<strong>2) Tarjeta T-money o Climate Card:</strong> Tap to exit, then tap de nuevo desde la puerta opuesta para entrar.<br>(Sin cargo adicional, solo se cuenta un transbordo).
       `
     },
     {
       question: "3. Cómo transbordar a la Línea 3",
-      answer: `No toque su tarjeta. Baje las escaleras y siga las señales naranjas de la Línea 3. Las plataformas de la Línea 2 y la Línea 3 están conectadas.<br><br>
+      answer: `<strong>No toque su tarjeta.</strong> Baje las escaleras y siga las señales naranjas de la Línea 3. Las plataformas de la Línea 2 y la Línea 3 están conectadas.<br><br>
 Si solo desea iniciar su viaje en la Línea 3 (sin transbordo), toque su tarjeta en la puerta, baje las escaleras y siga las señales naranjas de la Línea 3.`
     },
     {
