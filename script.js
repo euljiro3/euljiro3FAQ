@@ -10,14 +10,14 @@ const faqContent = {
 <br><br>
 
 <div class="error-buttons">
-<button class="error-btn" data-code="E-03">E-03</button>
-<button class="error-btn" data-code="E-04">E-04</button>
-<button class="error-btn" data-code="E-05">E-05</button>
-<button class="error-btn" data-code="E-07">E-07</button>
-<button class="error-btn" data-code="E-14">E-14</button>
-<button class="error-btn" data-code="E-27">E-27</button>
-<button class="error-btn" data-code="E-33">E-33</button>
-<button class="error-btn" data-code="E-44">E-44</button>
+<button class="error-btn" data-code="E-03">E-03(집표가 안된 카드)</button>
+<button class="error-btn" data-code="E-04">E-04(개표가 안된 카드)</button>
+<button class="error-btn" data-code="E-05">E-05(이용시간 초과)</button>
+<button class="error-btn" data-code="E-07">E-07(카드 유효기간 경과)</button>
+<button class="error-btn" data-code="E-14">E-14(잔액 부족)</button>
+<button class="error-btn" data-code="E-27">E-27(정기권 기간만료)</button>
+<button class="error-btn" data-code="E-33">E-33(이미 개표된 카드)</button>
+<button class="error-btn" data-code="E-44">E-44(이미 집표된 카드)</button>
 </div>
 
 <div class="error-detail" id="error-detail"></div>
@@ -65,14 +65,14 @@ const faqContent = {
 2) <strong>Tap your card again (No extra fare).</strong> Check the message when tapping your card and <strong><u>select the corresponding error code.</u></strong><br>
 
 <div class="error-buttons">
-<button class="error-btn" data-code="E-03">E-03</button>
-<button class="error-btn" data-code="E-04">E-04</button>
-<button class="error-btn" data-code="E-05">E-05</button>
-<button class="error-btn" data-code="E-07">E-07</button>
-<button class="error-btn" data-code="E-14">E-14</button>
-<button class="error-btn" data-code="E-27">E-27</button>
-<button class="error-btn" data-code="E-33">E-33</button>
-<button class="error-btn" data-code="E-44">E-44</button>
+<button class="error-btn" data-code="E-03">E-03(Not processed for exit)</button>
+<button class="error-btn" data-code="E-04">E-04(Not processed for entry)</button>
+<button class="error-btn" data-code="E-05">E-05(Time exceeded)</button>
+<button class="error-btn" data-code="E-07">E-07(Card expired)</button>
+<button class="error-btn" data-code="E-14">E-14(Insufficient balance)</button>
+<button class="error-btn" data-code="E-27">E-27(Commuter pass expired)</button>
+<button class="error-btn" data-code="E-33">E-33(Already processed for entry)</button>
+<button class="error-btn" data-code="E-44">E-44(Already processed for exit)</button>
 </div>
 
 <div class="error-detail" id="error-detail"></div>
@@ -119,14 +119,14 @@ Go through the wheelchair/speed gate and visit the station office (Information) 
 2) <strong>请再次刷卡（无额外费用）。</strong> 刷卡时请确认显示的提示信息，并 <strong><u>选择相应的错误代码。</u></strong><br>
 
 <div class="error-buttons">
-<button class="error-btn" data-code="E-03">E-03</button>
-<button class="error-btn" data-code="E-04">E-04</button>
-<button class="error-btn" data-code="E-05">E-05</button>
-<button class="error-btn" data-code="E-07">E-07</button>
-<button class="error-btn" data-code="E-14">E-14</button>
-<button class="error-btn" data-code="E-27">E-27</button>
-<button class="error-btn" data-code="E-33">E-33</button>
-<button class="error-btn" data-code="E-44">E-44</button>
+<button class="error-btn" data-code="E-03">E-03(未处理下车票务)</button>
+<button class="error-btn" data-code="E-04">E-04(未处理进站票务)</button>
+<button class="error-btn" data-code="E-05">E-05(超过使用时间)</button>
+<button class="error-btn" data-code="E-07">E-07(卡片已过期)</button>
+<button class="error-btn" data-code="E-14">E-14(余额不足)</button>
+<button class="error-btn" data-code="E-27">E-27(定期票已过期)</button>
+<button class="error-btn" data-code="E-33">E-33(已处理过进站)</button>
+<button class="error-btn" data-code="E-44">E-44(已处理过出站)</button>
 </div>
 
 <div class="error-detail" id="error-detail"></div>
@@ -151,7 +151,7 @@ Go through the wheelchair/speed gate and visit the station office (Information) 
     },
     {
       question: "3. 如何换乘3号线",
-      answer: `<strong>请不要刷卡。</strong>请下楼并跟随橙色（3号线）标识走。2号线和3号线站台是相连的。<br><br>
+      answer: `<strong>请不要刷卡。</strong>请下楼并跟随橙色（3号线）标识走。2号线 and 3号线站台是相连的。<br><br>
 如果您只是想乘坐3号线（而非换乘），请在闸机处刷卡，然后下楼跟随橙色（3号线）标识走。`
     },
     {
@@ -166,20 +166,20 @@ Go through the wheelchair/speed gate and visit the station office (Information) 
 
   ja: [
     {
-      question: "1. カードのエラー",
+      question: "1. カードのエ러",
       answer: `
 1) 入場用と退場用のゲートは分かれています。正しいゲート（緑の矢印）を使用してください。<br>
 2) <strong>もう一度タッチしてください（追加料金なし）。</strong> カードをタッチした際のメッセージを確認し、<strong><u>対応するエラーコードを選択してください。</u></strong><br>
 
 <div class="error-buttons">
-<button class="error-btn" data-code="E-03">E-03</button>
-<button class="error-btn" data-code="E-04">E-04</button>
-<button class="error-btn" data-code="E-05">E-05</button>
-<button class="error-btn" data-code="E-07">E-07</button>
-<button class="error-btn" data-code="E-14">E-14</button>
-<button class="error-btn" data-code="E-27">E-27</button>
-<button class="error-btn" data-code="E-33">E-33</button>
-<button class="error-btn" data-code="E-44">E-44</button>
+<button class="error-btn" data-code="E-03">E-03(下車処理未完了)</button>
+<button class="error-btn" data-code="E-04">E-04(乗車処理未完了)</button>
+<button class="error-btn" data-code="E-05">E-05(利用時間超過)</button>
+<button class="error-btn" data-code="E-07">E-07(有効期限切れ)</button>
+<button class="error-btn" data-code="E-14">E-14(残高不足)</button>
+<button class="error-btn" data-code="E-27">E-27(定期券期限切れ)</button>
+<button class="error-btn" data-code="E-33">E-33(既に乗車処理済み)</button>
+<button class="error-btn" data-code="E-44">E-44(既に下車処理済み)</button>
 </div>
 
 <div class="error-detail" id="error-detail"></div>
@@ -188,7 +188,7 @@ Go through the wheelchair/speed gate and visit the station office (Information) 
         "E-03": "下車処理がされていません。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-04": "乗車処理がされていません。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-05": "時間超過です。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-07": "カードの期限切れです。<br>非常ゲート（車椅子/スピードゲート）를 을 통과하여 11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-07": "カードの期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-14": "残高不足（お金が足りません）。<br>左右にある精算機でチャージし、再度カードをタッチして出てください。",
         "E-27": "定期券の期限切れです。<br>非常ゲート（車椅子/スピードゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-33": "既に乗車処理済みです（既にタッチされています）。<br>非常ゲートを通ってください（音が鳴っても無視してください）。",
@@ -205,7 +205,7 @@ Go through the wheelchair/speed gate and visit the station office (Information) 
     {
       question: "3. 3号線への乗り換え方法",
       answer: `<strong>カードをタッチしないでください。</strong>階段を降りて、オレンジ色の3号線の標識に従ってください。2号線と3号線のホームはつながっています。<br><br>
-乗り換えではなく、3号線から利用を開始する場合は、ゲートでカードをタッチして入場し、階段を降りてオレンジ色の3号線の標識に従ってください。`
+乗り換えではなく、3号線から利用を開始する場合は、ゲートでカード을 タッチして入場し、階段を降りてオレンジ色の3号線の標識に従ってください。`
     },
     {
       question: "4. その他のお問い合わせ",
@@ -225,14 +225,14 @@ Go through the wheelchair/speed gate and visit the station office (Information) 
 2) <strong>Pase su tarjeta de nuevo (Sin costo adicional).</strong> Verifique el mensaje al tocar su tarjeta y <strong><u>seleccione el código de error correspondiente.</u></strong><br>
 
 <div class="error-buttons">
-<button class="error-btn" data-code="E-03">E-03</button>
-<button class="error-btn" data-code="E-04">E-04</button>
-<button class="error-btn" data-code="E-05">E-05</button>
-<button class="error-btn" data-code="E-07">E-07</button>
-<button class="error-btn" data-code="E-14">E-14</button>
-<button class="error-btn" data-code="E-27">E-27</button>
-<button class="error-btn" data-code="E-33">E-33</button>
-<button class="error-btn" data-code="E-44">E-44</button>
+<button class="error-btn" data-code="E-03">E-03(Sin registro de salida)</button>
+<button class="error-btn" data-code="E-04">E-04(Sin registro de entrada)</button>
+<button class="error-btn" data-code="E-05">E-05(Tiempo excedido)</button>
+<button class="error-btn" data-code="E-07">E-07(Tarjeta expirada)</button>
+<button class="error-btn" data-code="E-14">E-14(Saldo insuficiente)</button>
+<button class="error-btn" data-code="E-27">E-27(Abono vencido)</button>
+<button class="error-btn" data-code="E-33">E-33(Ya registrado entrada)</button>
+<button class="error-btn" data-code="E-44">E-44(Ya registrado salida)</button>
 </div>
 
 <div class="error-detail" id="error-detail"></div>
@@ -309,6 +309,7 @@ function selectLanguage(language) {
         btn.style.width = "100%";
         btn.style.padding = "10px";
         btn.style.margin = "5px 0";
+	btn.style.textAlign = "left";
         btn.onclick = () => {
           const code = btn.getAttribute("data-code");
           if (faq.errors && errorDetailDiv) {
