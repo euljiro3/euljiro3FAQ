@@ -151,7 +151,7 @@ Go through the wheelchair/speed gate and visit the station office (Information) 
     },
     {
       question: "3. 如何换乘3号线",
-      answer: `<strong>请不要刷卡。</strong>请下楼并跟随橙色（3号线）标识走。2号线 and 3号线站台是相连的。<br><br>
+      answer: `<strong>请不要刷卡。</strong>请下楼并跟随橙色（3号线）标识走。2号线和3号线站台是相连的。<br><br>
 如果您只是想乘坐3号线（而非换乘），请在闸机处刷卡，然后下楼跟随橙色（3号线）标识走。`
     },
     {
@@ -166,7 +166,7 @@ Go through the wheelchair/speed gate and visit the station office (Information) 
 
   ja: [
     {
-      question: "1. カードのエ러",
+      question: "1. カードエラー",
       answer: `
 1) 入場用と退場用のゲートは分かれています。正しいゲート（緑の矢印）を使用してください。<br>
 2) <strong>もう一度タッチしてください（追加料金なし）。</strong> カードをタッチした際のメッセージを確認し、<strong><u>対応するエラーコードを選択してください。</u></strong><br>
