@@ -29,7 +29,7 @@ header {
 }
 
 .logo {
-    width: 80px;  /* 크기를 80px로 줄임 (깨짐 방지) */
+    width: 110px; /* 로고 크기 (80px → 110px로 키움) */
     height: auto; /* 비율 유지 */
     object-fit: contain;
     image-rendering: -webkit-optimize-contrast; /* 이미지 선명하게 처리 */
@@ -156,5 +156,24 @@ footer {
     font-weight: 600;
 }
 
+/* 한국어: 단어 중간에서 끊지 않고 띄어쓰기 단위로 줄바꿈 (중국어·일본어 등은 영향 없음) */
+.faq-container:lang(ko) {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
 
+/* 번호가 있는 항목: 둘째 줄부터 첫 줄의 글자 시작 위치에 맞춰 정렬 */
+.faq-item-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
 
+.faq-item-row .faq-num {
+    flex: 0 0 1.7em;
+}
+
+.faq-item-row .faq-text {
+    flex: 1;
+    min-width: 0;
+}
