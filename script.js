@@ -4,10 +4,8 @@ const faqContent = {
     {
       question: "1. 카드 오류",
       answer: `
-1) 나가는 게이트와 들어오는 게이트가 서로 다릅니다. 알맞은 게이트(초록색 화살표)를 이용하세요.<br><br>
-2) 카드를 다시 한 번 찍어주세요. 나오는 메시지를 확인하시고, 해당되는 에러코드를 선택하세요.<br>
-*추가요금 발생하지 않음.
-<br><br>
+<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">나가는 게이트와 들어오는 게이트가 서로 다릅니다. 알맞은 게이트(초록색 화살표)를 이용하세요.</span></div>
+<div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text"><u>카드를 다시 한 번 찍어주세요.</u> 나오는 메시지를 확인하시고, 해당되는 에러코드를 선택하세요.<br>*추가요금 발생하지 않음.</span></div>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03(집표가 안 된 카드)</button>
@@ -36,9 +34,8 @@ const faqContent = {
     {
       question: "2. 방향을 잘못 탔어요(역을 지나쳤어요)",
       answer: `
-1) 1회권인 경우:<br>헬프콜 버튼을 누른 뒤 반대편으로 건너가고 싶다고 말씀하세요.<br><br>
-2) 티머니카드 또는 기후동행카드(Climate Card)인 경우:<br>
-카드를 찍고 나가시고, 반대편 게이트에서 카드를 찍고 들어가세요.<br>(추가 요금 없음, 환승 1회만 차감)
+<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">1회권 또는 무임권:<br>헬프콜 버튼을 누른 뒤 반대편으로 건너가고 싶다고 말씀하세요.</span></div>
+<div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text">티머니 카드 또는 기후동행패스:<br>카드를 찍고 나가시고, 반대편 게이트에서 카드를 찍고 들어가세요.<br>(추가 요금 없음, 환승 1회만 차감)</span></div>
       `
     },
     {
@@ -362,6 +359,7 @@ function selectLanguage(language) {
   if (backBtn && backText[language]) backBtn.textContent = backText[language];
 
   faqContainer.innerHTML = "";
+  faqContainer.setAttribute("lang", language);
 
   // 1번 메뉴 위에 현재 역 안내 표시
   const stationBanner = createStationBanner(language);
