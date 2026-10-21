@@ -4,7 +4,7 @@ const faqContent = {
     {
       question: "1. 카드 오류",
       answer: `
-<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">나가는 게이트와 들어오는 게이트가 서로 다릅니다. 알맞은 게이트(초록색 화살표)를 이용하세요.</span></div>
+<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">나가는 게이트와 들어오는 게이트가 서로 다릅니다. <u>알맞은 게이트(초록색 화살표)를 이용하세요.</u></span></div>
 <div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text"><u>카드를 다시 한 번 찍어주세요.</u> 나오는 메시지를 확인하시고, 해당되는 에러코드를 선택하세요.<br>*추가요금 발생하지 않음.</span></div>
 
 <div class="error-buttons">
@@ -21,14 +21,14 @@ const faqContent = {
 <div class="error-detail" id="error-detail"></div>
       `,
       errors: {
-        "E-03": "집표가 안 된 카드(하차 처리 안 된 카드).<br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
-        "E-04": "개표가 안 된 카드(승차 처리 안 된 카드).<br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
-        "E-05": "이용시간 초과.<br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
-        "E-07": "카드 유효기간 경과.<br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
-        "E-14": "잔액 부족. 정산기(발매기) 이용하여 충전 후 카드 다시 찍고 나가세요.",
-        "E-27": "정기권 기간만료.<br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
-        "E-33": "이미 개표된 카드(이미 승차 처리된 카드).<br>비상게이트(휠체어게이트)를 지나가세요(소리가 나도 무시하세요)",
-        "E-44": "이미 집표된 카드(이미 하차 처리된 카드).<br>비상게이트(휠체어게이트)를 지나가세요(소리가 나도 무시하세요)"
+        "E-03": "집표가 안 된 카드(하차 처리 안 된 카드).<br><br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
+        "E-04": "개표가 안 된 카드(승차 처리 안 된 카드).<br><br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
+        "E-05": "이용시간 초과.<br><br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
+        "E-07": "카드 유효기간 경과.<br><br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
+        "E-14": "잔액 부족.<br><br>정산기(발매기) 이용하여 충전 후 카드 다시 찍고 나가세요.",
+        "E-27": "정기권 기간만료.<br><br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
+        "E-33": "이미 개표된 카드(이미 승차 처리된 카드).<br><br>비상게이트(휠체어게이트)를 지나가세요(소리가 나도 무시하세요)",
+        "E-44": "이미 집표된 카드(이미 하차 처리된 카드).<br><br>비상게이트(휠체어게이트)를 지나가세요(소리가 나도 무시하세요)"
       }
     },
     {
@@ -60,7 +60,7 @@ const faqContent = {
     {
       question: "1. Card Errors",
       answer: `
-<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">There are two separate gates for entry and exit. Please use the correct gate (green arrow).</span></div>
+<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">There are two separate gates for entry and exit. <u>Please use the correct gate (green arrow).</u></span></div>
 <div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text"><strong>Tap your card again (No extra fare).</strong> Check the message when tapping your card and <strong><u>select the corresponding error code.</u></strong></span></div>
 
 <div class="error-buttons">
@@ -77,14 +77,14 @@ const faqContent = {
 <div class="error-detail" id="error-detail"></div>
       `,
       errors: {
-        "E-03": "The ticket has not been processed for exit.<br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
-        "E-04": "The ticket has not been processed for entry.<br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
-        "E-05": "Time exceeded.<br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
-        "E-07": "Card expired.<br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
-        "E-14": "Insufficient balance (Not enough money).<br>Use the ticket machine (on your left or right) to recharge and tap your card again to exit.",
-        "E-27": "Commuter pass expired.<br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
-        "E-33": "Already processed for entry (Card has already been tagged).<br>Pass through the Emergency/Wide Gate (Ignore the beep sound).",
-        "E-44": "Already processed for exit (Card has already been tagged).<br>Pass through the Emergency/Wide Gate (Ignore the beep sound)."
+        "E-03": "The ticket has not been processed for exit.<br><br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
+        "E-04": "The ticket has not been processed for entry.<br><br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
+        "E-05": "Time exceeded.<br><br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
+        "E-07": "Card expired.<br><br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
+        "E-14": "Insufficient balance (Not enough money).<br><br>Use the ticket machine (on your left or right) to recharge and tap your card again to exit.",
+        "E-27": "Commuter pass expired.<br><br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
+        "E-33": "Already processed for entry (Card has already been tagged).<br><br>Pass through the Emergency/Wide Gate (Ignore the beep sound).",
+        "E-44": "Already processed for exit (Card has already been tagged).<br><br>Pass through the Emergency/Wide Gate (Ignore the beep sound)."
       }
     },
     {
@@ -116,7 +116,7 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
     {
       question: "1. 卡片错误",
       answer: `
-<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">进站和出站闸机是分开的。请使用正确的闸机（绿色箭头）。</span></div>
+<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">进站和出站闸机是分开的。<u>请使用正确的闸机（绿色箭头）。</u></span></div>
 <div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text"><strong>请再次刷卡（无额外费用）。</strong> 刷卡时请确认显示的提示信息，并 <strong><u>选择相应的错误代码。</u></strong></span></div>
 
 <div class="error-buttons">
@@ -133,14 +133,14 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
 <div class="error-detail" id="error-detail"></div>
       `,
       errors: {
-        "E-03": "上次出站未刷卡。<br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
-        "E-04": "进站时未刷卡。<br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
-        "E-05": "超过使用时间。<br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
-        "E-07": "卡片已过期。<br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
-        "E-14": "余额不足（金额不足）。<br>请使用充值机（在您的左侧或右侧）进行充值，然后再次刷卡出站。",
-        "E-27": "定期票已过期。<br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
-        "E-33": "已处理过进站（卡片已被标记）。<br>请通过 Emergency/Wide Gate（请忽略报警声）。",
-        "E-44": "已处理过出站（卡片已被标记）。<br>请通过 Emergency/Wide Gate（请忽略报警声）。"
+        "E-03": "上次出站未刷卡。<br><br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
+        "E-04": "进站时未刷卡。<br><br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
+        "E-05": "超过使用时间。<br><br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
+        "E-07": "卡片已过期。<br><br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
+        "E-14": "余额不足（金额不足）。<br><br>请使用充值机（在您的左侧或右侧）进行充值，然后再次刷卡出站。",
+        "E-27": "定期票已过期。<br><br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
+        "E-33": "已处理过进站（卡片已被标记）。<br><br>请通过 Emergency/Wide Gate（请忽略报警声）。",
+        "E-44": "已处理过出站（卡片已被标记）。<br><br>请通过 Emergency/Wide Gate（请忽略报警声）。"
       }
     },
     {
@@ -171,7 +171,7 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
     {
       question: "1. カードエラー",
       answer: `
-<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">入場用と退場用のゲートは分かれています。正しいゲート（緑の矢印）を使用してください。</span></div>
+<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">入場用と退場用のゲートは分かれています。<u>正しいゲート（緑の矢印）を使用してください。</u></span></div>
 <div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text"><strong>もう一度タッチしてください（追加料金なし）。</strong> カードをタッチした際のメッセージを確認し、<strong><u>対応するエラーコードを選択してください。</u></strong></span></div>
 
 <div class="error-buttons">
@@ -188,14 +188,14 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
 <div class="error-detail" id="error-detail"></div>
       `,
       errors: {
-        "E-03": "下車処理がされていません。<br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-04": "乗車処理がされていません。<br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-05": "時間超過です。<br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-07": "カードの期限切れです。<br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-14": "残高不足（お金が足りません）。<br>左右にある精算機でチャージし、再度カードをタッチして出てください。",
-        "E-27": "定期券の期限切れです。<br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-33": "既に乗車処理済みです（既にタッチされています）。<br>Emergency/Wide Gate を通ってください（音が鳴っても無視してください）。",
-        "E-44": "既に下車処理済みです（既にタッチされています）。<br>Emergency/Wide Gate を通ってください（音が鳴っても無視してください）。"
+        "E-03": "下車処理がされていません。<br><br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-04": "乗車処理がされていません。<br><br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-05": "時間超過です。<br><br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-07": "カードの期限切れです。<br><br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-14": "残高不足（お金が足りません）。<br><br>左右にある精算機でチャージし、再度カードをタッチして出てください。",
+        "E-27": "定期券の期限切れです。<br><br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-33": "既に乗車処理済みです（既にタッチされています）。<br><br>Emergency/Wide Gate を通ってください（音が鳴っても無視してください）。",
+        "E-44": "既に下車処理済みです（既にタッチされています）。<br><br>Emergency/Wide Gate を通ってください（音が鳴っても無視してください）。"
       }
     },
     {
@@ -226,7 +226,7 @@ Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information
     {
       question: "1. Errores de tarjeta",
       answer: `
-<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">Hay dos puertas separadas para la entrada y la salida. Use la puerta correcta (flecha verde).</span></div>
+<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">Hay dos puertas separadas para la entrada y la salida. <u>Use la puerta correcta (flecha verde).</u></span></div>
 <div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text"><strong>Pase su tarjeta de nuevo (Sin costo adicional).</strong> Verifique el mensaje al tocar su tarjeta y <strong><u>seleccione el código de error correspondiente.</u></strong></span></div>
 
 <div class="error-buttons">
@@ -243,14 +243,14 @@ Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information
 <div class="error-detail" id="error-detail"></div>
       `,
       errors: {
-        "E-03": "El boleto no tiene registro de salida.<br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
-        "E-04": "El boleto no tiene registro de entrada.<br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
-        "E-05": "Tiempo excedido.<br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
-        "E-07": "Tarjeta expirada.<br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
-        "E-14": "Saldo insuficiente (No hay suficiente dinero).<br>Use la máquina (a su izquierda o derecha) para recargar y toque la tarjeta nuevamente para salir.",
-        "E-27": "Pase de transporte vencido.<br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
-        "E-33": "Entrada ya procesada (La tarjeta ya ha sido registrada).<br>Pase por Emergency/Wide Gate (Ignore el sonido de la alarma).",
-        "E-44": "Salida ya procesada (La tarjeta ya ha sido registrada).<br>Pase por Emergency/Wide Gate (Ignore el sonido de la alarma)."
+        "E-03": "El boleto no tiene registro de salida.<br><br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
+        "E-04": "El boleto no tiene registro de entrada.<br><br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
+        "E-05": "Tiempo excedido.<br><br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
+        "E-07": "Tarjeta expirada.<br><br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
+        "E-14": "Saldo insuficiente (No hay suficiente dinero).<br><br>Use la máquina (a su izquierda o derecha) para recargar y toque la tarjeta nuevamente para salir.",
+        "E-27": "Pase de transporte vencido.<br><br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
+        "E-33": "Entrada ya procesada (La tarjeta ya ha sido registrada).<br><br>Pase por Emergency/Wide Gate (Ignore el sonido de la alarma).",
+        "E-44": "Salida ya procesada (La tarjeta ya ha sido registrada).<br><br>Pase por Emergency/Wide Gate (Ignore el sonido de la alarma)."
       }
     },
     {
@@ -356,6 +356,20 @@ function createStationBanner(language) {
 }
 
 // --- 언어 선택 및 로직 (기존 스크롤 기능 유지) ---
+// 일본어: 문단 끝 글자가 혼자 다음 줄로 넘어가지 않도록, 문단 마지막 6글자를 한 덩어리로 묶음
+function keepJapaneseEnding(html) {
+  return html
+    .split("<br><br>")
+    .map(par => {
+      const chars = Array.from(par);
+      if (chars.length <= 12) return par; // 짧은 문단은 그대로
+      const head = chars.slice(0, -6).join("");
+      const tail = chars.slice(-6).join("");
+      return head + '<span style="white-space:nowrap">' + tail + "</span>";
+    })
+    .join("<br><br>");
+}
+
 function selectLanguage(language) {
   const languageSelector = document.getElementById("language-selector");
   const faqContainer = document.getElementById("faq-container");
@@ -447,7 +461,8 @@ function selectLanguage(language) {
         answerDiv.querySelectorAll(".error-btn").forEach(b => setErrorBtnSelected(b, false));
 
         if (willOpen && faq.errors) {
-          detailDiv.innerHTML = faq.errors[code] || "";
+          const detailHtml = faq.errors[code] || "";
+          detailDiv.innerHTML = language === "ja" ? keepJapaneseEnding(detailHtml) : detailHtml;
           // 비상게이트 안내가 나가는 에러코드는 설명 맨 끝에 게이트 사진 추가
           if (GATE_PHOTO_CODES.includes(code)) {
             detailDiv.innerHTML += '<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency/Wide Gate">';
