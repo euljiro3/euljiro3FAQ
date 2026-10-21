@@ -51,7 +51,7 @@ const faqContent = {
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
 또는<br><br>
 비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.
-<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency/Wide Gate">
       `
     }
   ],
@@ -77,14 +77,14 @@ const faqContent = {
 <div class="error-detail" id="error-detail"></div>
       `,
       errors: {
-        "E-03": "The ticket has not been processed for exit.<br>Go through the emergency gate (wide wheelchair gate) and visit the station office (Information) near Exit 11 & 12.",
-        "E-04": "The ticket has not been processed for entry.<br>Go through the emergency gate (wide wheelchair gate) and visit the station office (Information) near Exit 11 & 12.",
-        "E-05": "Time exceeded.<br>Go through the emergency gate (wide wheelchair gate) and visit the station office (Information) near Exit 11 & 12.",
-        "E-07": "Card expired.<br>Go through the emergency gate (wide wheelchair gate) and visit the station office (Information) near Exit 11 & 12.",
+        "E-03": "The ticket has not been processed for exit.<br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
+        "E-04": "The ticket has not been processed for entry.<br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
+        "E-05": "Time exceeded.<br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
+        "E-07": "Card expired.<br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
         "E-14": "Insufficient balance (Not enough money).<br>Use the ticket machine (on your left or right) to recharge and tap your card again to exit.",
-        "E-27": "Commuter pass expired.<br>Go through the emergency gate (wide wheelchair gate) and visit the station office (Information) near Exit 11 & 12.",
-        "E-33": "Already processed for entry (Card has already been tagged).<br>Pass through the emergency gate (Ignore the beep sound).",
-        "E-44": "Already processed for exit (Card has already been tagged).<br>Pass through the emergency gate (Ignore the beep sound)."
+        "E-27": "Commuter pass expired.<br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
+        "E-33": "Already processed for entry (Card has already been tagged).<br>Pass through the Emergency/Wide Gate (Ignore the beep sound).",
+        "E-44": "Already processed for exit (Card has already been tagged).<br>Pass through the Emergency/Wide Gate (Ignore the beep sound)."
       }
     },
     {
@@ -106,8 +106,8 @@ If you just want to start your journey on Line 3 (not transferring), tap your ca
 Press the help call button.
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
 Or<br><br>
-Go through the emergency gate (wide wheelchair gate) and visit the station office (Information) near Exit 11 & 12.
-<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">
+Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency/Wide Gate">
       `
     }
   ],
@@ -133,14 +133,14 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
 <div class="error-detail" id="error-detail"></div>
       `,
       errors: {
-        "E-03": "上次出站未刷卡。<br>请通过应急门（轮椅专用宽通道），并前往11、12号出口附近的车站办公室（问讯处）咨询。",
-        "E-04": "进站时未刷卡。<br>请通过应急门（轮椅专用宽通道），并前往11、12号出口附近的车站办公室（问讯处）咨询。",
-        "E-05": "超过使用时间。<br>请通过应急门（轮椅专用宽通道），并前往11、12号出口附近的车站办公室（问讯处）咨询。",
-        "E-07": "卡片已过期。<br>请通过应急门（轮椅专用宽通道），并前往11、12号出口附近的车站办公室（问讯处）咨询。",
+        "E-03": "上次出站未刷卡。<br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
+        "E-04": "进站时未刷卡。<br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
+        "E-05": "超过使用时间。<br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
+        "E-07": "卡片已过期。<br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
         "E-14": "余额不足（金额不足）。<br>请使用充值机（在您的左侧或右侧）进行充值，然后再次刷卡出站。",
-        "E-27": "定期票已过期。<br>请通过应急门（轮椅专用宽通道），并前往11、12号出口附近的车站办公室（问讯处）咨询。",
-        "E-33": "已处理过进站（卡片已被标记）。<br>请通过应急门（请忽略报警声）。",
-        "E-44": "已处理过出站（卡片已被标记）。<br>请通过应急门（请忽略报警声）。"
+        "E-27": "定期票已过期。<br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
+        "E-33": "已处理过进站（卡片已被标记）。<br>请通过 Emergency/Wide Gate（请忽略报警声）。",
+        "E-44": "已处理过出站（卡片已被标记）。<br>请通过 Emergency/Wide Gate（请忽略报警声）。"
       }
     },
     {
@@ -161,8 +161,8 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
 请按求助按钮。
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
 或者<br><br>
-请通过应急门（轮椅专用宽通道），前往11、12号出口附近的车站办公室（问讯处）咨询。
-<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">
+请通过 Emergency/Wide Gate，前往11、12号出口附近的车站办公室（问讯处）咨询。
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency/Wide Gate">
       `
     }
   ],
@@ -188,14 +188,14 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
 <div class="error-detail" id="error-detail"></div>
       `,
       errors: {
-        "E-03": "下車処理がされていません。<br>非常ゲート（車椅子用の幅広ゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-04": "乗車処理がされていません。<br>非常ゲート（車椅子用の幅広ゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-05": "時間超過です。<br>非常ゲート（車椅子用の幅広ゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-07": "カードの期限切れです。<br>非常ゲート（車椅子用の幅広ゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-03": "下車処理がされていません。<br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-04": "乗車処理がされていません。<br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-05": "時間超過です。<br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-07": "カードの期限切れです。<br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-14": "残高不足（お金が足りません）。<br>左右にある精算機でチャージし、再度カードをタッチして出てください。",
-        "E-27": "定期券の期限切れです。<br>非常ゲート（車椅子用の幅広ゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-33": "既に乗車処理済みです（既にタッチされています）。<br>非常ゲートを通ってください（音が鳴っても無視してください）。",
-        "E-44": "既に下車処理済みです（既にタッチされています）。<br>非常ゲートを通ってください（音が鳴っても無視してください）。"
+        "E-27": "定期券の期限切れです。<br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-33": "既に乗車処理済みです（既にタッチされています）。<br>Emergency/Wide Gate を通ってください（音が鳴っても無視してください）。",
+        "E-44": "既に下車処理済みです（既にタッチされています）。<br>Emergency/Wide Gate を通ってください（音が鳴っても無視してください）。"
       }
     },
     {
@@ -216,8 +216,8 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
 ヘルプコールボタンを押してください。
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
 または<br><br>
-非常ゲート（車椅子用の幅広ゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。
-<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">
+Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency/Wide Gate">
       `
     }
   ],
@@ -243,14 +243,14 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
 <div class="error-detail" id="error-detail"></div>
       `,
       errors: {
-        "E-03": "El boleto no tiene registro de salida.<br>Pase por la puerta de emergencia (puerta ancha para sillas de ruedas) y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
-        "E-04": "El boleto no tiene registro de entrada.<br>Pase por la puerta de emergencia (puerta ancha para sillas de ruedas) y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
-        "E-05": "Tiempo excedido.<br>Pase por la puerta de emergencia (puerta ancha para sillas de ruedas) y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
-        "E-07": "Tarjeta expirada.<br>Pase por la puerta de emergencia (puerta ancha para sillas de ruedas) y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
+        "E-03": "El boleto no tiene registro de salida.<br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
+        "E-04": "El boleto no tiene registro de entrada.<br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
+        "E-05": "Tiempo excedido.<br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
+        "E-07": "Tarjeta expirada.<br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
         "E-14": "Saldo insuficiente (No hay suficiente dinero).<br>Use la máquina (a su izquierda o derecha) para recargar y toque la tarjeta nuevamente para salir.",
-        "E-27": "Pase de transporte vencido.<br>Pase por la puerta de emergencia (puerta ancha para sillas de ruedas) y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
-        "E-33": "Entrada ya procesada (La tarjeta ya ha sido registrada).<br>Pase por la puerta de emergencia (Ignore el sonido de la alarma).",
-        "E-44": "Salida ya procesada (La tarjeta ya ha sido registrada).<br>Pase por la puerta de emergencia (Ignore el sonido de la alarma)."
+        "E-27": "Pase de transporte vencido.<br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
+        "E-33": "Entrada ya procesada (La tarjeta ya ha sido registrada).<br>Pase por Emergency/Wide Gate (Ignore el sonido de la alarma).",
+        "E-44": "Salida ya procesada (La tarjeta ya ha sido registrada).<br>Pase por Emergency/Wide Gate (Ignore el sonido de la alarma)."
       }
     },
     {
@@ -271,8 +271,8 @@ Si solo desea iniciar su viaje en la Línea 3 (sin transbordo), toque su tarjeta
 Presione el botón de ayuda.
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
 O<br><br>
-Pase por la puerta de emergencia (puerta ancha para sillas de ruedas) y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.
-<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">
+Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency/Wide Gate">
       `
     }
   ]
@@ -384,6 +384,8 @@ function selectLanguage(language) {
 
     const questionBtn = document.createElement("button");
     questionBtn.className = "faq-question";
+    // 중국어·일본어는 글꼴에 따라 600 굵기가 얇게 보일 수 있어, 확실하게 굵은 글씨(700)로 지정
+    if (language === "zh" || language === "ja") questionBtn.style.fontWeight = "700";
     questionBtn.innerHTML = faq.question;
 
     const answerDiv = document.createElement("div");
@@ -448,7 +450,7 @@ function selectLanguage(language) {
           detailDiv.innerHTML = faq.errors[code] || "";
           // 비상게이트 안내가 나가는 에러코드는 설명 맨 끝에 게이트 사진 추가
           if (GATE_PHOTO_CODES.includes(code)) {
-            detailDiv.innerHTML += '<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">';
+            detailDiv.innerHTML += '<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency/Wide Gate">';
           }
           detailDiv.style.display = "block";
           setErrorBtnSelected(btn, true);
