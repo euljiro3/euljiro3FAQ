@@ -177,3 +177,13 @@ footer {
     flex: 1;
     min-width: 0;
 }
+
+/* 안내 사진 (게이트, 헬프콜 버튼) */
+.faq-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 14px 0 18px;
+    border-radius: 12px;
+    border: 1px solid #cfe0f2;
+}
