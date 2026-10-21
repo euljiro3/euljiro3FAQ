@@ -32,7 +32,7 @@ const faqContent = {
       }
     },
     {
-      question: "2. 방향을 잘못 탔어요(역을 지나쳤어요)",
+      question: "2. 방향을 잘못 탔어요(반대편으로 가고 싶어요)",
       answer: `
 <div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">1회권 또는 무임권:<br>헬프콜 버튼을 누른 뒤 반대편으로 건너가고 싶다고 말씀하세요.</span></div>
 <div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text">티머니 카드 또는 기후동행패스:<br>카드를 찍고 나가시고, 반대편 게이트에서 카드를 찍고 들어가세요.<br>(추가 요금 없음, 환승 1회만 차감)</span></div>
@@ -47,9 +47,11 @@ const faqContent = {
     {
       question: "4. 기타 문의",
       answer: `
-헬프콜 버튼을 누르세요.<br><br>
+헬프콜 버튼을 누르세요.
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
 또는<br><br>
 비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">
       `
     }
   ],
@@ -58,8 +60,8 @@ const faqContent = {
     {
       question: "1. Card Errors",
       answer: `
-1) There are two separate gates for entry and exit. Please use the correct gate (green arrow).<br>
-2) <strong>Tap your card again (No extra fare).</strong> Check the message when tapping your card and <strong><u>select the corresponding error code.</u></strong><br>
+<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">There are two separate gates for entry and exit. Please use the correct gate (green arrow).</span></div>
+<div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text"><strong>Tap your card again (No extra fare).</strong> Check the message when tapping your card and <strong><u>select the corresponding error code.</u></strong></span></div>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03(Not processed for exit)</button>
@@ -86,10 +88,10 @@ const faqContent = {
       }
     },
     {
-      question: "2. I went the wrong way (I missed my stop)",
+      question: "2. I went the wrong way (I want to go to the opposite side)",
       answer: `You can go to the opposite side to take the subway back. <br>
-<strong>1) Single-journey ticket:</strong> Do not tap your card. Press the help call button and tell us that you want to go to the opposite side.<br><br>
-<strong>2) T-money (Transportation Card) or Climate Card:</strong> Tap to exit, then tap again at the opposite gate to enter.<br>(No extra fare, only one transfer counted.)
+<div class="faq-item-row"><span class="faq-num"><strong>1)</strong></span><span class="faq-text"><strong>Single-journey ticket:</strong> Do not tap your card. Press the help call button and tell us that you want to go to the opposite side.</span></div>
+<div class="faq-item-row"><span class="faq-num"><strong>2)</strong></span><span class="faq-text"><strong>T-money (Transportation Card) or Climate Card:</strong> Tap to exit, then tap again at the opposite gate to enter.<br>(No extra fare, only one transfer counted.)</span></div>
       `
     },
     {
@@ -101,9 +103,11 @@ If you just want to start your journey on Line 3 (not transferring), tap your ca
     {
       question: "4. Other Inquiries",
       answer: `
-Press the help call button.<br><br>
+Press the help call button.
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
 Or<br><br>
 Go through the emergency gate (wide wheelchair gate) and visit the station office (Information) near Exit 11 & 12.
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">
       `
     }
   ],
@@ -112,8 +116,8 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
     {
       question: "1. 卡片错误",
       answer: `
-1) 进站和出站闸机是分开的。请使用正确的闸机（绿色箭头）。<br>
-2) <strong>请再次刷卡（无额外费用）。</strong> 刷卡时请确认显示的提示信息，并 <strong><u>选择相应的错误代码。</u></strong><br>
+<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">进站和出站闸机是分开的。请使用正确的闸机（绿色箭头）。</span></div>
+<div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text"><strong>请再次刷卡（无额外费用）。</strong> 刷卡时请确认显示的提示信息，并 <strong><u>选择相应的错误代码。</u></strong></span></div>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03(上次出站未刷卡)</button>
@@ -140,10 +144,10 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
       }
     },
     {
-      question: "2. 我坐错方向了（坐过站了）",
+      question: "2. 我坐错方向了（我想去对面站台）",
       answer: `您可以前往对面再次乘坐地铁。<br>
-<strong>1) 单程票：</strong> 请勿刷卡。请按求助按钮，告知工作人员您想去对面站台。<br><br>
-<strong>2) T-money卡或气候同行卡：</strong> 刷卡出站后，从对面闸机再次刷卡进站。<br>（不产生额外费用，仅计为一次换乘。）
+<div class="faq-item-row"><span class="faq-num"><strong>1)</strong></span><span class="faq-text"><strong>单程票：</strong> 请勿刷卡。请按求助按钮，告知工作人员您想去对面站台。</span></div>
+<div class="faq-item-row"><span class="faq-num"><strong>2)</strong></span><span class="faq-text"><strong>T-money卡或Climate Card：</strong> 刷卡出站后，从对面闸机再次刷卡进站。<br>（不产生额外费用，仅计为一次换乘。）</span></div>
       `
     },
     {
@@ -154,9 +158,11 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
     {
       question: "4. 其他咨询",
       answer: `
-请按求助按钮。<br><br>
+请按求助按钮。
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
 或者<br><br>
 请通过应急门（轮椅专用宽通道），前往11、12号出口附近的车站办公室（问讯处）咨询。
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">
       `
     }
   ],
@@ -165,8 +171,8 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
     {
       question: "1. カードエラー",
       answer: `
-1) 入場用と退場用のゲートは分かれています。正しいゲート（緑の矢印）を使用してください。<br>
-2) <strong>もう一度タッチしてください（追加料金なし）。</strong> カードをタッチした際のメッセージを確認し、<strong><u>対応するエラーコードを選択してください。</u></strong><br>
+<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">入場用と退場用のゲートは分かれています。正しいゲート（緑の矢印）を使用してください。</span></div>
+<div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text"><strong>もう一度タッチしてください（追加料金なし）。</strong> カードをタッチした際のメッセージを確認し、<strong><u>対応するエラーコードを選択してください。</u></strong></span></div>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03(下車処理未完了)</button>
@@ -193,10 +199,10 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
       }
     },
     {
-      question: "2. 反対方向に乗ってしまいました（乗り過ごしてしまいました）",
+      question: "2. 反対方向に乗ってしまいました（反対側に行きたいです）",
       answer: `反対側に移動して再度地下鉄に乗ることができます。<br>
-<strong>1) 1回券の場合：</strong> カードをタッチしないでください。ヘルプコールボタンを押し、反対側に移動したい旨を伝えてください。<br><br>
-<strong>2) T-moneyまたは気候同行カード：</strong> 一度タッチして出場し、反対側のゲートから再度タッチして入場してください。<br>（追加料金なし、乗り換え1回としてカウントされます。）
+<div class="faq-item-row"><span class="faq-num"><strong>1)</strong></span><span class="faq-text"><strong>1回券の場合：</strong> カードをタッチしないでください。ヘルプコールボタンを押し、反対側に移動したい旨を伝えてください。</span></div>
+<div class="faq-item-row"><span class="faq-num"><strong>2)</strong></span><span class="faq-text"><strong>T-moneyまたはClimate Card：</strong> 一度タッチして出場し、反対側のゲートから再度タッチして入場してください。<br>（追加料金なし、乗り換え1回としてカウントされます。）</span></div>
       `
     },
     {
@@ -207,9 +213,11 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
     {
       question: "4. その他のお問い合わせ",
       answer: `
-ヘルプコールボタンを押してください。<br><br>
+ヘルプコールボタンを押してください。
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
 または<br><br>
 非常ゲート（車椅子用の幅広ゲート）を通り、11・12番出口付近の駅務室（Information）にお越しください。
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">
       `
     }
   ],
@@ -218,8 +226,8 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
     {
       question: "1. Errores de tarjeta",
       answer: `
-1) Hay dos puertas separadas para la entrada y la salida. Use la puerta correcta (flecha verde).<br>
-2) <strong>Pase su tarjeta de nuevo (Sin costo adicional).</strong> Verifique el mensaje al tocar su tarjeta y <strong><u>seleccione el código de error correspondiente.</u></strong><br>
+<div class="faq-item-row"><span class="faq-num">1)</span><span class="faq-text">Hay dos puertas separadas para la entrada y la salida. Use la puerta correcta (flecha verde).</span></div>
+<div class="faq-item-row"><span class="faq-num">2)</span><span class="faq-text"><strong>Pase su tarjeta de nuevo (Sin costo adicional).</strong> Verifique el mensaje al tocar su tarjeta y <strong><u>seleccione el código de error correspondiente.</u></strong></span></div>
 
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03(Sin registro de salida)</button>
@@ -246,10 +254,10 @@ Go through the emergency gate (wide wheelchair gate) and visit the station offic
       }
     },
     {
-      question: "2. Me equivoqué de dirección (Me pasé mi parada)",
+      question: "2. Me equivoqué de dirección (Quiero ir al lado opuesto)",
       answer: `Puede ir al lado opuesto para tomar el metro de regreso.<br>
-<strong>1) Boleto de un solo viaje:</strong> No toque la tarjeta. Presione el botón de ayuda y diga que quiere ir al lado opuesto.<br><br>
-<strong>2) Tarjeta T-money o Climate Card:</strong> Pase la tarjeta para salir, luego pase de nuevo desde la puerta opuesta para entrar.<br>(Sin cargo adicional, solo se cuenta un transbordo).
+<div class="faq-item-row"><span class="faq-num"><strong>1)</strong></span><span class="faq-text"><strong>Boleto de un solo viaje:</strong> No toque la tarjeta. Presione el botón de ayuda y diga que quiere ir al lado opuesto.</span></div>
+<div class="faq-item-row"><span class="faq-num"><strong>2)</strong></span><span class="faq-text"><strong>Tarjeta T-money o Climate Card:</strong> Pase la tarjeta para salir, luego pase de nuevo desde la puerta opuesta para entrar.<br>(Sin cargo adicional, solo se cuenta un transbordo).</span></div>
       `
     },
     {
@@ -260,9 +268,11 @@ Si solo desea iniciar su viaje en la Línea 3 (sin transbordo), toque su tarjeta
     {
       question: "4. Otras consultas",
       answer: `
-Presione el botón de ayuda.<br><br>
+Presione el botón de ayuda.
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
 O<br><br>
 Pase por la puerta de emergencia (puerta ancha para sillas de ruedas) y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.
+<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">
       `
     }
   ]
@@ -273,6 +283,9 @@ function scrollToCenter(element) {
   const isTall = element.offsetHeight > window.innerHeight;
   element.scrollIntoView({ behavior: 'smooth', block: isTall ? 'start' : 'center' });
 }
+
+// --- 게이트 사진을 보여줄 에러코드 (사진 파일은 index.html과 같은 위치의 images 폴더에 있어야 함) ---
+const GATE_PHOTO_CODES = ["E-03", "E-04", "E-33", "E-44"];
 
 // --- 에러코드 버튼 선택 표시 (선택되면 파란색, 해제하면 원래 색) ---
 function setErrorBtnSelected(btn, selected) {
@@ -294,10 +307,10 @@ const backText = {
 const STATION_NUMBER = "203";
 const stationText = {
   ko: '현재 역은 <strong>을지로3가</strong> 2호선입니다',
-  en: 'You are now at <strong>Euljiro-3(sam)ga</strong>, Line 2',
+  en: 'You are now at <strong>Euljiro-3(sam)ga</strong>, Line&nbsp;2',
   zh: '您现在位于 2号线 <strong>乙支路3街站</strong>',
   ja: '現在地は 2号線 <strong>乙支路3街(ウルチロサムガ)駅</strong> です',
-  es: 'Usted está ahora en <strong>Euljiro-3(sam)ga</strong>, Línea 2'
+  es: 'Usted está ahora en <strong>Euljiro-3(sam)ga</strong>, Línea&nbsp;2'
 };
 
 function createStationBanner(language) {
@@ -390,6 +403,24 @@ function selectLanguage(language) {
       btn.style.margin = "5px 0";
       btn.style.textAlign = "left";
 
+      // 영어·스페인어: 버튼 문구가 길어 두 줄이 되면 괄호 부분 전체를 둘째 줄로 내림
+      // (괄호 부분 글자를 화면 폭에 맞춰 줄여서 세 줄까지 넘어가지 않게 함)
+      if (language === "en" || language === "es") {
+        const label = btn.textContent;
+        const p = label.indexOf("(");
+        if (p > 0) {
+          btn.textContent = label.slice(0, p) + " ";
+          const sub = document.createElement("span");
+          sub.textContent = label.slice(p);
+          sub.style.display = "inline-block";
+          sub.style.fontWeight = "600";
+          sub.style.lineHeight = "1.3";
+          sub.style.fontSize = "13px";
+          sub.style.fontSize = "min(14px, calc((90vw - 115px) / 16))";
+          btn.appendChild(sub);
+        }
+      }
+
       const detailDiv = document.createElement("div");
       detailDiv.className = "error-detail-item";
       detailDiv.style.display = "none";
@@ -415,6 +446,10 @@ function selectLanguage(language) {
 
         if (willOpen && faq.errors) {
           detailDiv.innerHTML = faq.errors[code] || "";
+          // 비상게이트 안내가 나가는 에러코드는 설명 맨 끝에 게이트 사진 추가
+          if (GATE_PHOTO_CODES.includes(code)) {
+            detailDiv.innerHTML += '<img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/gate.jpg" width="1000" height="750" alt="Emergency gate (wide gate)">';
+          }
           detailDiv.style.display = "block";
           setErrorBtnSelected(btn, true);
           scrollToCenter(detailDiv);
