@@ -1,3 +1,20 @@
+// --- 역 시설 안내 카드(아이콘 + 제목 + 설명) 만들기 도우미 ---
+const SVG_OPEN = '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">';
+const ICON_ELEVATOR = SVG_OPEN + '<rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M9 10l3-3 3 3"/><path d="M9 14l3 3 3-3"/></svg>';
+const ICON_TOILET = SVG_OPEN.replace('fill="none"', 'fill="#fff"').replace('stroke="#fff"', 'stroke="none"') +
+  '<circle cx="7" cy="5" r="2"/><path d="M4.5 9.5h5V16H8v5H6v-5H4.5z"/><circle cx="17" cy="5" r="2"/><path d="M17 9l3.8 8.5H18.5V21h-3v-3.5h-2.3z"/>' +
+  '<rect x="11.6" y="3" width="0.8" height="18" opacity=".6"/></svg>';
+const ICON_LOCKER = SVG_OPEN + '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M12 3v18M4 12h16"/><path d="M9 7.5h.01M15 7.5h.01M9 16.5h.01M15 16.5h.01" stroke-width="2.4"/></svg>';
+
+function facilitySub(label, text) {
+  return '<div style="margin-top:10px;"><span style="font-weight:800;color:#004c97;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;">' + label + '</span><br>' + text + '</div>';
+}
+function facilityCard(icon, title, bodyHtml) {
+  return '<div style="display:flex;align-items:flex-start;gap:12px;background:#f2f7fd;border:1px solid #d6e4f5;border-radius:14px;padding:14px;margin-bottom:12px;">' +
+    '<div style="flex:0 0 46px;height:46px;border-radius:50%;background:#004c97;display:flex;align-items:center;justify-content:center;">' + icon + '</div>' +
+    '<div style="flex:1;min-width:0;"><div style="font-weight:800;font-size:1.08em;color:#004c97;">' + title + '</div>' + bodyHtml + '</div></div>';
+}
+
 // --- 다국어 FAQ 데이터 (최종 검수 완료 버전) ---
 const faqContent = {
   ko: [
@@ -10,12 +27,13 @@ const faqContent = {
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03(집표가 안 된 카드)</button>
 <button class="error-btn" data-code="E-04">E-04(개표가 안 된 카드)</button>
-<button class="error-btn" data-code="E-05">E-05(이용시간 초과)</button>
-<button class="error-btn" data-code="E-07">E-07(카드 유효기간 경과)</button>
 <button class="error-btn" data-code="E-14">E-14(잔액 부족)</button>
 <button class="error-btn" data-code="E-27">E-27(정기권 기간만료)</button>
+<button class="error-btn" data-code="E-32">E-32(미충전/환불상태)</button>
 <button class="error-btn" data-code="E-33">E-33(이미 개표된 카드)</button>
+<button class="error-btn" data-code="E-35">E-35(일회권 사용 완료)</button>
 <button class="error-btn" data-code="E-44">E-44(이미 집표된 카드)</button>
+<button class="error-btn" data-code="E-45">E-45(일회권 거리 초과)</button>
 </div>
 
 <div class="error-detail" id="error-detail"></div>
@@ -23,12 +41,13 @@ const faqContent = {
       errors: {
         "E-03": "집표가 안 된 카드(하차 처리 안 된 카드).<br><br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
         "E-04": "개표가 안 된 카드(승차 처리 안 된 카드).<br><br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
-        "E-05": "이용시간 초과.<br><br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
-        "E-07": "카드 유효기간 경과.<br><br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
         "E-14": "잔액 부족.<br><br>정산기(발매기) 이용하여 충전 후 카드 다시 찍고 나가세요.",
         "E-27": "정기권 기간만료.<br><br>비상게이트(휠체어게이트)를 통과하셔서 11번, 12번 출구 쪽에 있는 역무실(Information)에 문의하세요.",
+        "E-32": "사용할 수 없는 카드입니다.<br><br>발매기에서 충전하세요.",
         "E-33": "이미 개표된 카드(이미 승차 처리된 카드).<br><br>비상게이트(휠체어게이트)를 지나가세요(소리가 나도 무시하세요)",
-        "E-44": "이미 집표된 카드(이미 하차 처리된 카드).<br><br>비상게이트(휠체어게이트)를 지나가세요(소리가 나도 무시하세요)"
+        "E-35": "사용이 완료된 승차권입니다.<br><br>비상게이트(휠체어게이트)를 지나가세요(소리가 나도 무시하세요)<br><br>보증금은 보증금 환급기에서 환급받으세요.",
+        "E-44": "이미 집표된 카드(이미 하차 처리된 카드).<br><br>비상게이트(휠체어게이트)를 지나가세요(소리가 나도 무시하세요)",
+        "E-45": "일회권 거리가 초과하였습니다.<br><br>정산기를 이용해 충전해주세요.(현금만 가능)"
       }
     },
     {
@@ -54,7 +73,15 @@ const faqContent = {
       `
     },
     {
-      question: "5. 기타 문의",
+      question: "5. 역 시설 위치",
+      answer: `
+${facilityCard(ICON_ELEVATOR, "엘리베이터", facilitySub("밖으로 나가는 엘리베이터", "12번 출구, 10번 출구 근처 엘리베이터를 이용하세요.") + facilitySub("승강장으로 내려가는 엘리베이터", "화장실 옆 게이트 안에 있는 엘리베이터를 이용하세요."))}
+${facilityCard(ICON_TOILET, "화장실", '<div style="margin-top:6px;">9번, 10번 출구 방향 통로에 있습니다.<br>(게이트 밖)</div>')}
+${facilityCard(ICON_LOCKER, "물품보관함", '<div style="margin-top:6px;">화장실 맞은편에 있습니다.</div>')}
+      `
+    },
+    {
+      question: "6. 기타 문의",
       answer: `
 헬프콜 버튼을 누르세요.
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
@@ -75,12 +102,13 @@ const faqContent = {
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03(Not processed for exit)</button>
 <button class="error-btn" data-code="E-04">E-04(Not processed for entry)</button>
-<button class="error-btn" data-code="E-05">E-05(Time exceeded)</button>
-<button class="error-btn" data-code="E-07">E-07(Card expired)</button>
 <button class="error-btn" data-code="E-14">E-14(Insufficient balance)</button>
 <button class="error-btn" data-code="E-27">E-27(Commuter pass expired)</button>
+<button class="error-btn" data-code="E-32">E-32(Ticket Not Available)</button>
 <button class="error-btn" data-code="E-33">E-33(Already processed for entry)</button>
+<button class="error-btn" data-code="E-35">E-35(Ticket has already been used)</button>
 <button class="error-btn" data-code="E-44">E-44(Already processed for exit)</button>
+<button class="error-btn" data-code="E-45">E-45(Ticket distance exceeded)</button>
 </div>
 
 <div class="error-detail" id="error-detail"></div>
@@ -88,12 +116,13 @@ const faqContent = {
       errors: {
         "E-03": "The ticket has not been processed for exit.<br><br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
         "E-04": "The ticket has not been processed for entry.<br><br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
-        "E-05": "Time exceeded.<br><br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
-        "E-07": "Card expired.<br><br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
         "E-14": "Insufficient balance (Not enough money).<br><br>Use the ticket machine (on your left or right) to recharge and tap your card again to exit.",
         "E-27": "Commuter pass expired.<br><br>Go through the Emergency/Wide Gate and visit the station office (Information) near Exit 11 & 12.",
+        "E-32": "This ticket has not been charged.<br><br>Use the ticket machine to charge it.",
         "E-33": "Already processed for entry (Card has already been tagged).<br><br>Pass through the Emergency/Wide Gate (Ignore the beep sound).",
-        "E-44": "Already processed for exit (Card has already been tagged).<br><br>Pass through the Emergency/Wide Gate (Ignore the beep sound)."
+        "E-35": "This ticket has already been used.<br><br>Pass through the Emergency/Wide Gate (Ignore the beep sound).<br><br>Redeem your deposit from the deposit machine.",
+        "E-44": "Already processed for exit (Card has already been tagged).<br><br>Pass through the Emergency/Wide Gate (Ignore the beep sound).",
+        "E-45": "The distance limit of this single-journey ticket has been exceeded.<br><br>Use the ticket machine to recharge (cash only)."
       }
     },
     {
@@ -119,7 +148,15 @@ If you just want to start your journey on Line 3 (not transferring), tap your ca
       `
     },
     {
-      question: "5. Other Inquiries",
+      question: "5. Station Facilities",
+      answer: `
+${facilityCard(ICON_ELEVATOR, "Elevators", facilitySub("Elevator going outside", "Use the elevator near Exit 12 or Exit 10.") + facilitySub("Elevator going down to the platform", "Use the elevator inside the gate next to the restroom."))}
+${facilityCard(ICON_TOILET, "Restrooms", '<div style="margin-top:6px;">They are in the passage toward Exits 9 and 10.<br>(Outside the gate)</div>')}
+${facilityCard(ICON_LOCKER, "Lockers", '<div style="margin-top:6px;">The lockers are across from the restroom.</div>')}
+      `
+    },
+    {
+      question: "6. Other Inquiries",
       answer: `
 Press the help call button.
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
@@ -140,12 +177,13 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03(上次出站未刷卡)</button>
 <button class="error-btn" data-code="E-04">E-04(进站时未刷卡)</button>
-<button class="error-btn" data-code="E-05">E-05(超过使用时间)</button>
-<button class="error-btn" data-code="E-07">E-07(卡片已过期)</button>
 <button class="error-btn" data-code="E-14">E-14(余额不足)</button>
 <button class="error-btn" data-code="E-27">E-27(定期票已过期)</button>
+<button class="error-btn" data-code="E-32">E-32(车票不可用)</button>
 <button class="error-btn" data-code="E-33">E-33(已处理过进站)</button>
+<button class="error-btn" data-code="E-35">E-35(车票已使用)</button>
 <button class="error-btn" data-code="E-44">E-44(已处理过出站)</button>
+<button class="error-btn" data-code="E-45">E-45(单程票超出里程)</button>
 </div>
 
 <div class="error-detail" id="error-detail"></div>
@@ -153,12 +191,13 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
       errors: {
         "E-03": "上次出站未刷卡。<br><br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
         "E-04": "进站时未刷卡。<br><br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
-        "E-05": "超过使用时间。<br><br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
-        "E-07": "卡片已过期。<br><br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
         "E-14": "余额不足（金额不足）。<br><br>请使用充值机（在您的左侧或右侧）进行充值，然后再次刷卡出站。",
         "E-27": "定期票已过期。<br><br>请通过 Emergency/Wide Gate，并前往11、12号出口附近的车站办公室（问讯处）咨询。",
+        "E-32": "此车票未充值。<br><br>请使用充值机进行充值。",
         "E-33": "已处理过进站（卡片已被标记）。<br><br>请通过 Emergency/Wide Gate（请忽略报警声）。",
-        "E-44": "已处理过出站（卡片已被标记）。<br><br>请通过 Emergency/Wide Gate（请忽略报警声）。"
+        "E-35": "此车票已使用。<br><br>请通过 Emergency/Wide Gate（请忽略报警声）。<br><br>请在押金退还机办理押金退还。",
+        "E-44": "已处理过出站（卡片已被标记）。<br><br>请通过 Emergency/Wide Gate（请忽略报警声）。",
+        "E-45": "单程票已超出乘车里程。<br><br>请使用充值机进行充值（仅限现金）。"
       }
     },
     {
@@ -183,7 +222,15 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
       `
     },
     {
-      question: "5. 其他咨询",
+      question: "5. 车站设施位置",
+      answer: `
+${facilityCard(ICON_ELEVATOR, "电梯", facilitySub("通往站外的电梯", "请使用12号出口、10号出口附近的电梯。") + facilitySub("通往站台的电梯", "请使用洗手间旁边闸机内的电梯。"))}
+${facilityCard(ICON_TOILET, "洗手间", '<div style="margin-top:6px;">位于通往9号、10号出口方向的通道内。<br>（闸机外）</div>')}
+${facilityCard(ICON_LOCKER, "储物柜", '<div style="margin-top:6px;">在洗手间对面。</div>')}
+      `
+    },
+    {
+      question: "6. 其他咨询",
       answer: `
 请按求助按钮。
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
@@ -204,12 +251,13 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03(下車処理未完了)</button>
 <button class="error-btn" data-code="E-04">E-04(乗車処理未完了)</button>
-<button class="error-btn" data-code="E-05">E-05(利用時間超過)</button>
-<button class="error-btn" data-code="E-07">E-07(有効期限切れ)</button>
 <button class="error-btn" data-code="E-14">E-14(残高不足)</button>
 <button class="error-btn" data-code="E-27">E-27(定期券期限切れ)</button>
+<button class="error-btn" data-code="E-32">E-32(利用不可のきっぷ)</button>
 <button class="error-btn" data-code="E-33">E-33(既に乗車処理済み)</button>
+<button class="error-btn" data-code="E-35">E-35(使用済みのきっぷ)</button>
 <button class="error-btn" data-code="E-44">E-44(既に下車処理済み)</button>
+<button class="error-btn" data-code="E-45">E-45(1回券の区間超過)</button>
 </div>
 
 <div class="error-detail" id="error-detail"></div>
@@ -217,12 +265,13 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
       errors: {
         "E-03": "下車処理がされていません。<br><br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-04": "乗車処理がされていません。<br><br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-05": "時間超過です。<br><br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
-        "E-07": "カードの期限切れです。<br><br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
         "E-14": "残高不足（お金が足りません）。<br><br>左右にある精算機でチャージし、再度カードをタッチして出てください。",
         "E-27": "定期券の期限切れです。<br><br>Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information）にお越しください。",
+        "E-32": "このきっぷはチャージされていません。<br><br>精算機でチャージしてください。",
         "E-33": "既に乗車処理済みです（既にタッチされています）。<br><br>Emergency/Wide Gate を通ってください（音が鳴っても無視してください）。",
-        "E-44": "既に下車処理済みです（既にタッチされています）。<br><br>Emergency/Wide Gate を通ってください（音が鳴っても無視してください）。"
+        "E-35": "このきっぷは既に使用済みです。<br><br>Emergency/Wide Gate を通ってください（音が鳴っても無視してください）。<br><br>デポジットはデポジット返金機で払い戻してください。",
+        "E-44": "既に下車処理済みです（既にタッチされています）。<br><br>Emergency/Wide Gate を通ってください（音が鳴っても無視してください）。",
+        "E-45": "1回券の利用区間を超えています。<br><br>精算機でチャージしてください（現金のみ）。"
       }
     },
     {
@@ -247,7 +296,15 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
       `
     },
     {
-      question: "5. その他のお問い合わせ",
+      question: "5. 駅の設備の場所",
+      answer: `
+${facilityCard(ICON_ELEVATOR, "エレベーター", facilitySub("地上（外）に出るエレベーター", "12番出口、10番出口付近のエレベーターをご利用ください。") + facilitySub("ホームに降りるエレベーター", "トイレ横のゲート内にあるエレベーターをご利用ください。"))}
+${facilityCard(ICON_TOILET, "トイレ", '<div style="margin-top:6px;">9番・10番出口方面の通路にあります。<br>（ゲートの外）</div>')}
+${facilityCard(ICON_LOCKER, "ロッカー", '<div style="margin-top:6px;">トイレの向かい側にあります。</div>')}
+      `
+    },
+    {
+      question: "6. その他のお問い合わせ",
       answer: `
 ヘルプコールボタンを押してください。
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
@@ -268,12 +325,13 @@ Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information
 <div class="error-buttons">
 <button class="error-btn" data-code="E-03">E-03(Sin registro de salida)</button>
 <button class="error-btn" data-code="E-04">E-04(Sin registro de entrada)</button>
-<button class="error-btn" data-code="E-05">E-05(Tiempo excedido)</button>
-<button class="error-btn" data-code="E-07">E-07(Tarjeta expirada)</button>
 <button class="error-btn" data-code="E-14">E-14(Saldo insuficiente)</button>
 <button class="error-btn" data-code="E-27">E-27(Pase de transporte vencido)</button>
+<button class="error-btn" data-code="E-32">E-32(Boleto no disponible)</button>
 <button class="error-btn" data-code="E-33">E-33(Ya registrado entrada)</button>
+<button class="error-btn" data-code="E-35">E-35(Boleto ya utilizado)</button>
 <button class="error-btn" data-code="E-44">E-44(Ya registrado salida)</button>
+<button class="error-btn" data-code="E-45">E-45(Distancia excedida)</button>
 </div>
 
 <div class="error-detail" id="error-detail"></div>
@@ -281,12 +339,13 @@ Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information
       errors: {
         "E-03": "El boleto no tiene registro de salida.<br><br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
         "E-04": "El boleto no tiene registro de entrada.<br><br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
-        "E-05": "Tiempo excedido.<br><br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
-        "E-07": "Tarjeta expirada.<br><br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
         "E-14": "Saldo insuficiente (No hay suficiente dinero).<br><br>Use la máquina (a su izquierda o derecha) para recargar y toque la tarjeta nuevamente para salir.",
         "E-27": "Pase de transporte vencido.<br><br>Pase por Emergency/Wide Gate y visite la oficina de la estación (Información) cerca de las salidas 11 y 12.",
+        "E-32": "Este boleto no ha sido cargado.<br><br>Use la máquina de boletos para cargarlo.",
         "E-33": "Entrada ya procesada (La tarjeta ya ha sido registrada).<br><br>Pase por Emergency/Wide Gate (Ignore el sonido de la alarma).",
-        "E-44": "Salida ya procesada (La tarjeta ya ha sido registrada).<br><br>Pase por Emergency/Wide Gate (Ignore el sonido de la alarma)."
+        "E-35": "Este boleto ya fue utilizado.<br><br>Pase por Emergency/Wide Gate (Ignore el sonido de la alarma).<br><br>Recupere su depósito en la máquina de depósitos.",
+        "E-44": "Salida ya procesada (La tarjeta ya ha sido registrada).<br><br>Pase por Emergency/Wide Gate (Ignore el sonido de la alarma).",
+        "E-45": "Se excedió la distancia de este boleto de un solo viaje.<br><br>Use la máquina de boletos para recargar (solo efectivo)."
       }
     },
     {
@@ -311,7 +370,15 @@ Si solo desea iniciar su viaje en la Línea 3 (sin transbordo), toque su tarjeta
       `
     },
     {
-      question: "5. Otras consultas",
+      question: "5. Instalaciones de la estación",
+      answer: `
+${facilityCard(ICON_ELEVATOR, "Ascensores", facilitySub("Ascensor para salir al exterior", "Use el ascensor cerca de la Salida 12 o la Salida 10.") + facilitySub("Ascensor para bajar al andén", "Use el ascensor que está dentro de la puerta junto a los baños."))}
+${facilityCard(ICON_TOILET, "Baños", '<div style="margin-top:6px;">Están en el pasillo hacia las Salidas 9 y 10.<br>(Fuera de la puerta)</div>')}
+${facilityCard(ICON_LOCKER, "Casilleros", '<div style="margin-top:6px;">Los casilleros están frente a los baños.</div>')}
+      `
+    },
+    {
+      question: "6. Otras consultas",
       answer: `
 Presione el botón de ayuda.
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
@@ -330,7 +397,7 @@ function scrollToCenter(element) {
 }
 
 // --- 게이트 사진을 보여줄 에러코드 (사진 파일은 index.html과 같은 위치의 images 폴더에 있어야 함) ---
-const GATE_PHOTO_CODES = ["E-03", "E-04", "E-33", "E-44"];
+const GATE_PHOTO_CODES = ["E-03", "E-04", "E-33", "E-35", "E-44"];
 
 // --- 에러코드 버튼 선택 표시 (선택되면 파란색, 해제하면 원래 색) ---
 function setErrorBtnSelected(btn, selected) {
