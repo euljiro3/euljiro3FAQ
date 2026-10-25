@@ -45,7 +45,16 @@ const faqContent = {
 `
     },
     {
-      question: "4. 기타 문의",
+      question: "4. 노선도",
+      answer: `
+<strong>Seoul Metro Map (서울 지하철 노선도)</strong>
+<a href="images/map_english.jpg" target="_blank" rel="noopener"><img class="faq-photo" src="images/map_english.jpg" width="2576" height="2576" alt="Seoul Metro Map" loading="lazy" style="display:block;width:100%;max-width:100%;height:auto;margin:12px 0 8px;border-radius:12px;"></a>
+<div style="font-size:0.85em;color:#5b6b7c;">지도를 누르면 크게 볼 수 있어요.</div>
+<a href="http://www.seoulmetro.co.kr/en/cyberStation.do?menuIdx=337" target="_blank" rel="noopener" style="display:block;margin-top:14px;padding:12px 14px;border-radius:10px;background:#1f6fd6;color:#fff;text-decoration:none;font-weight:700;text-align:center;">서울교통공사 사이버스테이션 바로가기</a>
+      `
+    },
+    {
+      question: "5. 기타 문의",
       answer: `
 헬프콜 버튼을 누르세요.
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
@@ -101,7 +110,16 @@ If you just want to start your journey on Line 3 (not transferring), tap your ca
 `
     },
     {
-      question: "4. Other Inquiries",
+      question: "4. Metro Map",
+      answer: `
+<strong>Seoul Metro Map</strong>
+<a href="images/map_english.jpg" target="_blank" rel="noopener"><img class="faq-photo" src="images/map_english.jpg" width="2576" height="2576" alt="Seoul Metro Map" loading="lazy" style="display:block;width:100%;max-width:100%;height:auto;margin:12px 0 8px;border-radius:12px;"></a>
+<div style="font-size:0.85em;color:#5b6b7c;">Tap the map to view it larger.</div>
+<a href="http://www.seoulmetro.co.kr/en/cyberStation.do?menuIdx=337" target="_blank" rel="noopener" style="display:block;margin-top:14px;padding:12px 14px;border-radius:10px;background:#1f6fd6;color:#fff;text-decoration:none;font-weight:700;text-align:center;">Cyber Station in Seoul Metro</a>
+      `
+    },
+    {
+      question: "5. Other Inquiries",
       answer: `
 Press the help call button.
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
@@ -156,7 +174,16 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
 如果您只是想乘坐3号线（而非换乘），请在闸机处刷卡，然后下楼跟随橙色（3号线）标识走。`
     },
     {
-      question: "4. 其他咨询",
+      question: "4. 地铁线路图",
+      answer: `
+<strong>Seoul Metro Map（首尔地铁线路图）</strong>
+<a href="images/map_english.jpg" target="_blank" rel="noopener"><img class="faq-photo" src="images/map_english.jpg" width="2576" height="2576" alt="Seoul Metro Map" loading="lazy" style="display:block;width:100%;max-width:100%;height:auto;margin:12px 0 8px;border-radius:12px;"></a>
+<div style="font-size:0.85em;color:#5b6b7c;">点击地图可放大查看。</div>
+<a href="http://www.seoulmetro.co.kr/en/cyberStation.do?menuIdx=337" target="_blank" rel="noopener" style="display:block;margin-top:14px;padding:12px 14px;border-radius:10px;background:#1f6fd6;color:#fff;text-decoration:none;font-weight:700;text-align:center;">前往首尔地铁 Cyber Station</a>
+      `
+    },
+    {
+      question: "5. 其他咨询",
       answer: `
 请按求助按钮。
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
@@ -211,7 +238,16 @@ Go through the Emergency/Wide Gate and visit the station office (Information) ne
 乗り換えではなく、3号線から利用を開始する場合は、ゲートでカードをタッチして入場し、階段を降りてオレンジ色の3号線の標識に従ってください。`
     },
     {
-      question: "4. その他のお問い合わせ",
+      question: "4. 路線図",
+      answer: `
+<strong>Seoul Metro Map（ソウル地下鉄路線図）</strong>
+<a href="images/map_english.jpg" target="_blank" rel="noopener"><img class="faq-photo" src="images/map_english.jpg" width="2576" height="2576" alt="Seoul Metro Map" loading="lazy" style="display:block;width:100%;max-width:100%;height:auto;margin:12px 0 8px;border-radius:12px;"></a>
+<div style="font-size:0.85em;color:#5b6b7c;">地図をタップすると大きく表示されます。</div>
+<a href="http://www.seoulmetro.co.kr/en/cyberStation.do?menuIdx=337" target="_blank" rel="noopener" style="display:block;margin-top:14px;padding:12px 14px;border-radius:10px;background:#1f6fd6;color:#fff;text-decoration:none;font-weight:700;text-align:center;">ソウルメトロ Cyber Station を開く</a>
+      `
+    },
+    {
+      question: "5. その他のお問い合わせ",
       answer: `
 ヘルプコールボタンを押してください。
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
@@ -266,7 +302,16 @@ Emergency/Wide Gate を通り、11・12番出口付近の駅務室（Information
 Si solo desea iniciar su viaje en la Línea 3 (sin transbordo), toque su tarjeta en la puerta, baje las escaleras y siga las señales naranjas de la Línea 3.`
     },
     {
-      question: "4. Otras consultas",
+      question: "4. Mapa del metro",
+      answer: `
+<strong>Seoul Metro Map (Mapa del metro de Seúl)</strong>
+<a href="images/map_english.jpg" target="_blank" rel="noopener"><img class="faq-photo" src="images/map_english.jpg" width="2576" height="2576" alt="Seoul Metro Map" loading="lazy" style="display:block;width:100%;max-width:100%;height:auto;margin:12px 0 8px;border-radius:12px;"></a>
+<div style="font-size:0.85em;color:#5b6b7c;">Toque el mapa para verlo más grande.</div>
+<a href="http://www.seoulmetro.co.kr/en/cyberStation.do?menuIdx=337" target="_blank" rel="noopener" style="display:block;margin-top:14px;padding:12px 14px;border-radius:10px;background:#1f6fd6;color:#fff;text-decoration:none;font-weight:700;text-align:center;">Abrir Cyber Station de Seoul Metro</a>
+      `
+    },
+    {
+      question: "5. Otras consultas",
       answer: `
 Presione el botón de ayuda.
 <img class="faq-photo" style="display:block;width:100%;max-width:100%;height:auto;margin:14px 0 18px;border-radius:12px;" src="images/open_gate.jpg" width="1000" height="750" alt="Help call button">
