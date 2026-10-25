@@ -22,7 +22,7 @@ header {
     background: linear-gradient(135deg, #004c97 0%, #002d5a 100%);
     color: #fff;
     text-align: center;
-    padding: 10px 20px 24px; /* 파란 칸 높이를 줄임 (위 10px, 아래 24px) */
+    padding: 10px 20px; /* 파란 칸 높이를 줄임 (위아래 10px) */
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -48,8 +48,7 @@ header {
 }
 
 .language-selector {
-    margin-top: -20px; 
-    text-align: center;
+    text-align: center; /* 위로 겹치던 margin-top: -20px 제거 → 파란 칸 아래에 위치 */
 }
 
 /* 질문 버튼 - 중앙 정렬 */
